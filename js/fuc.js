@@ -59,7 +59,10 @@ function mobileNav(){
 function commentStuff(){
   $('.comment-unit').first().addClass('active-people');
   $('.single-logo').first().addClass('active-logo');
-  $('.single-logo').click(function(){
+  $('.comment-mobile-nav span').first().addClass('active-logo');
+
+
+  $('.single-logo, .comment-mobile-nav span').click(function(){
     var $this = $(this),
         $siblings = $this.parent().children(),
         position = $siblings.index($this);
