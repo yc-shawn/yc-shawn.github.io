@@ -3,6 +3,7 @@ $(document).ready(function(){
   smoothScroll(300);
   workBelt();
   workLoad();
+  commentStuff();
 });
 
 // smoothScroll function is applied from the document ready function
@@ -52,5 +53,43 @@ function workLoad(){
 function mobileNav(){
   $(".burger-nav").on("click", function(){
     $("#homeNav ul").toggleClass("open");
+  });
+}
+
+function commentStuff(){
+  $('.comment-unit').first().addClass('active-people');
+  $('.single-logo').first().addClass('active-logo');
+  $('.single-logo').click(function(){
+    var $this = $(this),
+        $siblings = $this.parent().children(),
+        position = $siblings.index($this);
+    $('.comment-unit').removeClass('active-people').eq(position).addClass('active-people');
+    $siblings.removeClass('active-logo');
+    $this.addClass('active-logo');
+  });
+
+  $('.control-next, .control-pre').click(function(){
+    var $this = $(this),
+        curActiveComment = $('.comment-belt').find('.active-people'),
+        position = $('.comment-belt').children().index(curActiveComment),
+        commentNum = $('.comment-unit').length;
+    if ($this.hasClass('control-next')){
+      if (position < commentNum - 1){
+        $('.active-people').removeClass('active-people').next().addClass('active-people');
+        $('.active-logo').removeClass('active-logo').next().addClass('active-logo');
+      } else {
+        $('.comment-unit').removeClass('active-people').first().addClass('active-people');
+        $('.single-logo').removeClass('active-logo').first().addClass('active-logo');
+      }
+    } else {
+      if (position > 0){
+        $('.active-people').removeClass('active-people').prev().addClass('active-people');
+        $('.active-logo').removeClass('active-logo').prev().addClass('active-logo');
+      } else {
+        $('.comment-unit').removeClass('active-people').last().addClass('active-people');
+        $('.single-logo').removeClass('active-logo').last().addClass('active-logo');
+      }
+    }
+
   });
 }
