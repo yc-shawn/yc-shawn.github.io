@@ -1,0 +1,149 @@
+.alt-section {
+  background-color: rgba(250, 250, 250, 0.9); }
+
+.section-work {
+  overflow: hidden; }
+
+.work-belt {
+  width: 200%;
+  position: relative;
+  left: 0%;
+  transition: left 0.33s; }
+
+.thumb-wrap, .work-wrap {
+  width: 50%;
+  float: left; }
+
+.thumb-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  overflow: auto; }
+
+.thumb-unit {
+  display: block;
+  width: 48%;
+  margin: 1%;
+  /*height: 270px;*/
+  float: left;
+  position: relative;
+  padding-top: 27%;
+  overflow: hidden;
+  /*border-radius: 5px;*/
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 2px 2px 8px 0 black;
+  -webkit-perspective: 300px;
+  perspective: 300px;
+  cursor: pointer; }
+
+@media screen and (max-width: 540px) {
+  .thumb-unit {
+    width: 98%;
+    padding-top: 56.25%; } }
+
+.ros-img {
+  background-image: url(../image/ROS_tutorial_cover.png); }
+
+.reco-img {
+  background-image: url(../image/Multimodal_Recording.jpeg); }
+
+.signature-img {
+  background-image: url(../image/SignatureSignIn.png_thumb.jpg); }
+
+.iosapp-img {
+  background-image: url(../image/iosapp.png); }
+
+.thumb-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  transition: top 0.33s, -webkit-transform 0.33s;
+  transition: transform 0.33s, top 0.33s;
+  transition: transform 0.33s, top 0.33s, -webkit-transform 0.33s;
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: bottom;
+  -ms-transform-origin: bottom;
+  transform-origin: bottom; }
+
+.thumb-unit:hover .thumb-overlay {
+  top: 0%;
+  background: darkgrey;
+  opacity: 0.9;
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg); }
+
+.thumb-overlay strong {
+  display: block;
+  padding: 20px;
+  color: white;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 1.2; }
+
+.work-container {
+  max-width: 640px;
+  margin: 0 auto;
+  display: none; }
+
+.work-container img {
+  max-width: 100%;
+  margin-bottom: 20px; }
+
+.work-container .project-title {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0 0 20px; }
+
+.work-return {
+  /*background: url(../image/nav-icon.png);*/
+  background: url(../image/return-icon2.png);
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  top: 35px;
+  left: -60px; }
+
+@media screen and (max-width: 740px) {
+  .work-return {
+    left: 0; }
+  .work-container {
+    margin: 0 10px; }
+  .work-container .project-title {
+    margin-left: 50px; } }
+
+.video-box {
+  position: relative;
+  padding-bottom: 45%;
+  /* 9/16 */
+  padding-top: 0px;
+  height: 0;
+  margin: 20px auto;
+  width: 80%; }
+
+.video-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }

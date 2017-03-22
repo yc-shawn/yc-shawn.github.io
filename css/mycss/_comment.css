@@ -1,0 +1,85 @@
+.section-comment {
+  position: relative; }
+
+.control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+  .control div {
+    width: 40px;
+    height: 40px;
+    font-size: 40px; }
+  .control .control-pre, .control .control-next {
+    position: absolute;
+    top: 50%; }
+  .control .control-pre {
+    left: 20px; }
+  .control .control-next {
+    right: 20px; }
+
+.comment-belt {
+  width: 100%;
+  position: relative; }
+  .comment-belt .comment-unit {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 740px;
+    margin: 0 auto 50px; }
+    .comment-belt .comment-unit .comment-info {
+      min-width: 300px;
+      text-align: center; }
+      .comment-belt .comment-unit .comment-info img {
+        max-width: 128px;
+        border-radius: 50%; }
+      .comment-belt .comment-unit .comment-info .comment-name {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400; }
+      .comment-belt .comment-unit .comment-info .comment-title {
+        color: #999; }
+    .comment-belt .comment-unit .comment-content {
+      position: relative;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 36px; }
+      .comment-belt .comment-unit .comment-content .quote {
+        position: absolute;
+        top: 0;
+        left: -30px;
+        width: 60px;
+        height: 60px;
+        z-index: -1;
+        opacity: 0.3;
+        background-image: url(../image/quote.jpg);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat; }
+
+.comment-logo {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 740px;
+  margin: 0 auto 50px;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .comment-logo .single-logo {
+    height: 80px;
+    min-width: 145px;
+    cursor: pointer;
+    margin: 0 20px;
+    background-image: url(../image/ros-logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .comment-logo .single-logo.active-logo {
+      box-shadow: 0px 4px 0px 0px grey; }

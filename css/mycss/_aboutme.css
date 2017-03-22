@@ -1,0 +1,122 @@
+h3 {
+  text-align: center;
+  color: #e1c184;
+  padding: 100px 0 30px 0; }
+
+.face-lockup {
+  max-width: 780px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.face-lockup .face-img {
+  width: 200px;
+  height: 200px;
+  background: url(../image/MyPortrait_circle.png);
+  background-size: cover;
+  /*border-radius: 100px;*/
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3; }
+
+.icon1, .icon2, .icon3, .icon4 {
+  width: 60px;
+  height: 60px;
+  background: #999;
+  border-radius: 50%; }
+
+.icon1 {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1; }
+
+.icon2 {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2; }
+
+.icon3 {
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4; }
+
+.icon4 {
+  -webkit-order: 5;
+  -ms-flex-order: 5;
+  order: 5; }
+
+.blurb {
+  max-width: 620px;
+  padding: 0 15px;
+  margin: 50px auto;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 300; }
+
+@media screen and (max-width: 650px) {
+  .face-lockup {
+    display: block;
+    text-align: center; }
+  .face-lockup div {
+    display: inline-block; }
+  .face-lockup .face-img {
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 auto 30px auto; }
+  .icon1, .icon2, .icon3, .icon4 {
+    margin: 5px; } }
+
+.skill-lockup {
+  max-width: 700px;
+  margin: 100px auto;
+  color: #999;
+  overflow: auto; }
+
+.skill-unit {
+  width: 23%;
+  padding-left: 10%;
+  float: left; }
+
+.skill-icon {
+  margin: 2px 0 30px; }
+
+.skill-icon span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-color: black;
+  margin-right: 5px;
+  border-radius: 50%; }
+
+.skill-icon span:after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 2px; }
+
+.skill-4 span:nth-child(n+5) {
+  background-color: lightgrey; }
+
+.skill-3 span:nth-child(n+4) {
+  background-color: lightgrey; }
+
+.skill-2 span:nth-child(n+3) {
+  background-color: lightgrey; }
+
+@media screen and (max-width: 541px) {
+  .skill-lockup {
+    margin-left: 25px; }
+  .skill-unit {
+    width: 45%;
+    padding-left: 5%; } }
