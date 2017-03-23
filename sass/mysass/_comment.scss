@@ -7,7 +7,7 @@ img{
 .control{
   z-index: 1;
   position: absolute;
-  top: 0;
+  top: 202px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -19,7 +19,7 @@ img{
   }
   .control-pre, .control-next{
     position: absolute;
-    top: 75px;
+    top: 100px;
     cursor: pointer;
     // z-index: +1;
     &:hover{

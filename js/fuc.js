@@ -76,13 +76,14 @@ function commentStuff(){
         curActiveComment = $('.comment-belt').find('.active-people'),
         position = $('.comment-belt').children().index(curActiveComment),
         commentNum = $('.comment-unit').length;
+        console.log(curActiveComment);
     if ($this.hasClass('control-next')){
-      if (position < commentNum - 1){
+      if (position < commentNum-1){
         $('.active-people').removeClass('active-people').next().addClass('active-people');
         $('.active-logo').removeClass('active-logo').next().addClass('active-logo');
       } else {
         $('.comment-unit').removeClass('active-people').first().addClass('active-people');
-        $('.single-logo').removeClass('active-logo').first().addClass('active-logo');
+        $('.comment-mobile-nav span').removeClass('active-logo').first().addClass('active-logo');
       }
     } else {
       if (position > 0){
@@ -90,7 +91,7 @@ function commentStuff(){
         $('.active-logo').removeClass('active-logo').prev().addClass('active-logo');
       } else {
         $('.comment-unit').removeClass('active-people').last().addClass('active-people');
-        $('.single-logo').removeClass('active-logo').last().addClass('active-logo');
+        $('.comment-mobile-nav span').removeClass('active-logo').last().addClass('active-logo');
       }
     }
 
