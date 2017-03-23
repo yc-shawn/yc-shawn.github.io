@@ -15,11 +15,11 @@ img{
   margin: auto;
   div{
     width: 30px;
-    opacity: 0.5;
+    opacity: 0.4;
   }
   .control-pre, .control-next{
     position: absolute;
-    top: 100px;
+    top: 90px;
     cursor: pointer;
     // z-index: +1;
     &:hover{
@@ -61,7 +61,6 @@ img{
         font-weight: 400;
       }
       .comment-title{
-        // font-style: normal;
         color: #999;
       }
     }
@@ -110,7 +109,6 @@ img{
 }
 .comment-mobile-nav{
   text-align: center;
-  // display: none;
   span{
     cursor: pointer;
     display: inline-block;
@@ -120,6 +118,10 @@ img{
     border: solid 2px lightgrey;
     margin: 0 10px;
 
+    &:hover{
+      border-color: darkgrey;
+    }
+
     &.active-logo{
       border-color: black;
     }
@@ -128,7 +130,9 @@ img{
 
 @media screen and (max-width: 840px){
   .control{
-    display: none;
+    div{
+      width: 20px;
+    }
   }
   .comment-belt{
     .comment-unit{
@@ -146,15 +150,12 @@ img{
         margin: 0px 15%;
         .quote{
           // left: 10px;
-          // top: -30px;
+          top: -30px;
         }
       }
     }
   }
   .comment-logo{
     display: none;
-  }
-  .comment-mobile-nav{
-    display: block;
   }
 }
