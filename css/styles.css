@@ -348,7 +348,7 @@ img {
 .control {
   z-index: 1;
   position: absolute;
-  top: 0;
+  top: 202px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -359,7 +359,7 @@ img {
     opacity: 0.5; }
   .control .control-pre, .control .control-next {
     position: absolute;
-    top: 75px;
+    top: 100px;
     cursor: pointer; }
     .control .control-pre:hover, .control .control-next:hover {
       opacity: 0.8; }
