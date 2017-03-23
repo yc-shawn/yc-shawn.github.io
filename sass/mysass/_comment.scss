@@ -5,6 +5,7 @@ img{
   position: relative;
 }
 .control{
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -18,7 +19,7 @@ img{
   }
   .control-pre, .control-next{
     position: absolute;
-    top: 50%;
+    top: 75px;
     cursor: pointer;
     // z-index: +1;
     &:hover{
@@ -37,7 +38,6 @@ img{
 .comment-belt{
   width: 100%;
   position: relative;
-  z-index: -1;
   .comment-unit{
     display: none;
     position: relative;
@@ -110,9 +110,8 @@ img{
 }
 .comment-mobile-nav{
   text-align: center;
-  display: none;
+  // display: none;
   span{
-    z-index: +1;
     cursor: pointer;
     display: inline-block;
     width: 16px;

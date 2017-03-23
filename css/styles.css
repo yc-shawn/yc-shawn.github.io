@@ -78,7 +78,8 @@ h1 {
 h3 {
   text-align: center;
   color: #e1c184;
-  padding: 100px 0 30px 0; }
+  padding: 100px 0 30px 0;
+  margin: 10px auto; }
 
 .face-lockup {
   max-width: 780px;
@@ -345,6 +346,7 @@ img {
   position: relative; }
 
 .control {
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 0;
@@ -357,7 +359,7 @@ img {
     opacity: 0.5; }
   .control .control-pre, .control .control-next {
     position: absolute;
-    top: 50%;
+    top: 75px;
     cursor: pointer; }
     .control .control-pre:hover, .control .control-next:hover {
       opacity: 0.8; }
@@ -368,8 +370,7 @@ img {
 
 .comment-belt {
   width: 100%;
-  position: relative;
-  z-index: -1; }
+  position: relative; }
   .comment-belt .comment-unit {
     display: none;
     position: relative;
@@ -435,10 +436,8 @@ img {
       opacity: 1; }
 
 .comment-mobile-nav {
-  text-align: center;
-  display: none; }
+  text-align: center; }
   .comment-mobile-nav span {
-    z-index: +1;
     cursor: pointer;
     display: inline-block;
     width: 16px;
