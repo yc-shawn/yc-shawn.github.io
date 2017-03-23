@@ -4,6 +4,7 @@ $(document).ready(function(){
   workBelt();
   workLoad();
   commentStuff();
+  sideMenu()
   $("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
 });
 
@@ -96,6 +97,13 @@ function commentStuff(){
       }
     }
 
+  });
+}
+
+function sideMenu(){
+  var $body = $('body');
+  $('.toggle, header nav a').click(function(){
+    $body.toggleClass('menu-open');
   });
 }
 

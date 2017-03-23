@@ -18,6 +18,8 @@ header {
   background: url(../image/Boston-myback-dark.jpg) center center;
   background-size: cover;
   position: relative; }
+  header .toggle {
+    height: 0; }
 
 header .logo {
   width: 100px;
@@ -59,14 +61,44 @@ h1 {
 
 @media screen and (max-width: 650px) {
   header {
-    height: 480px; }
+    padding-top: 100px;
+    height: 400px; }
+    header .toggle {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      top: 20px;
+      right: 10px;
+      background: url(../image/nav-icon.png) center center;
+      background-size: contain;
+      background-repeat: no-repeat; }
   h1 {
     font-size: 32px;
     padding-top: 100px; }
   h1 span {
     border: white solid 5px; }
-  header nav a {
-    font-size: 12px; } }
+  body {
+    overflow-x: hidden;
+    position: relative;
+    right: 0; }
+  .menu-open {
+    right: 150px; }
+    .menu-open header nav {
+      right: 0; }
+  header nav {
+    color: red;
+    background: #333;
+    position: fixed;
+    top: 0;
+    padding: 30px 0;
+    right: -150px;
+    width: 150px;
+    height: 100%; }
+    header nav a {
+      padding: 10px 8px;
+      display: block; }
+  body, header nav {
+    transition: right 0.33s ease; } }
 
 .kicker {
   text-align: center;
