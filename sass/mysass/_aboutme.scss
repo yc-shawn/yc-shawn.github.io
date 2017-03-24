@@ -20,17 +20,32 @@ h3{
     order: 3;
   }
 }
+.icon1{
+  background: url(../image/code.png) center center;
+  order:1;
+}
+.icon2{
+  background: url(../image/cogs.png) center center;
+  order:2;
+}
+.icon3{
+  background: url(../image/clock.png) center center;
+  order:4;
+}
+.icon4{
+  background: url(../image/pencil.png) center center;
+  order:5;
+}
 
 .icon1, .icon2, .icon3, .icon4{
   width: 60px;
   height: 60px;
-  background:  #999;
+  opacity: 0.6;
+  background-color: lightgrey;
+  background-repeat: no-repeat;
   border-radius: 50%;
 }
-.icon1{order:1;}
-.icon2{order:2;}
-.icon3{order:4;}
-.icon4{order:5;}
+
 
 .blurb{
   max-width: 620px;

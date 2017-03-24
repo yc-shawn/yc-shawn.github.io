@@ -135,31 +135,37 @@ h3 {
     -ms-flex-order: 3;
     order: 3; }
 
-.icon1, .icon2, .icon3, .icon4 {
-  width: 60px;
-  height: 60px;
-  background: #999;
-  border-radius: 50%; }
-
 .icon1 {
+  background: url(../image/code.png) center center;
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1; }
 
 .icon2 {
+  background: url(../image/cogs.png) center center;
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2; }
 
 .icon3 {
+  background: url(../image/clock.png) center center;
   -webkit-order: 4;
   -ms-flex-order: 4;
   order: 4; }
 
 .icon4 {
+  background: url(../image/pencil.png) center center;
   -webkit-order: 5;
   -ms-flex-order: 5;
   order: 5; }
+
+.icon1, .icon2, .icon3, .icon4 {
+  width: 60px;
+  height: 60px;
+  opacity: 0.6;
+  background-color: lightgrey;
+  background-repeat: no-repeat;
+  border-radius: 50%; }
 
 .blurb {
   max-width: 620px;
