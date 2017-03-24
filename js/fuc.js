@@ -5,9 +5,34 @@ $(document).ready(function(){
   workLoad();
   commentStuff();
   sideMenu()
+  backToTop();
   $('.thumb-container a').attr('href', '#work');
   $("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
 });
+
+function backToTop(){
+  var btt = $('.back-to-top');
+  btt.click(function(event){
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    },333);
+  });
+
+  $(window).scroll( function(){
+    console.log('sc');
+    var $this = $(this),
+        height = $this.height(),
+        top = $this.scrollTop();
+    if (top > height){
+      if(!btt.is(':visible')){
+        btt.fadeIn();
+      }
+    } else {
+      btt.hide();
+    }
+  });
+}
 
 // smoothScroll function is applied from the document ready function
 function smoothScroll (duration) {

@@ -59,6 +59,20 @@ h1 {
     padding: 0.5em 0.2em;
     border: white solid 10px; }
 
+.back-to-top {
+  background: url(../image/backtotop.png) center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  opacity: 0.5;
+  z-index: 1; }
+
 @media screen and (max-width: 650px) {
   header {
     padding-top: 100px;
