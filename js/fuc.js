@@ -39,9 +39,9 @@ function workLoad(){
   $.ajaxSetup({ cache: true }); // save to cache to make more fast
   map = {};
   map['Youtube Channel'] = '1';
-  map['MultiModal recording for activities recognition'] = '2';
+  map['Human In The Loop System Laboratory'] = '2';
   map['Signature sign in system'] = '3';
-  map['iOS Application'] = '4';
+  map['Local Life Service IOS Application<'] = '4';
   $('.thumb-unit').click(function(){
     var $this = $(this),
         newTitle = $this.find('strong').text();

@@ -272,7 +272,7 @@ h3 {
   background-image: url(../image/youtubuChannel.jpeg); }
 
 .reco-img {
-  background-image: url(../image/Multimodal_Recording.jpeg); }
+  background-image: url(../image/HILS-lab-thumb.jpeg); }
 
 .signature-img {
   background-image: url(../image/SignatureSignIn.png_thumb.jpg); }
@@ -392,10 +392,15 @@ h3 {
   .project-load h1 {
     font-size: 24px;
     padding: 20px; }
+  .project-load h2 {
+    font-size: 22px;
+    text-align: center; }
   .project-load p {
     text-align: center; }
   .project-load ol {
     padding: 10px 10%; }
+  .project-load .ssis_sponsor {
+    color: #1c50a5; }
 
 .video-box {
   position: relative;
@@ -412,9 +417,13 @@ h3 {
     width: 100%;
     height: 100%; }
 
-.youtube-logo {
+.mid-img {
   width: 60%;
   margin: 20px 20%; }
+
+.sm-img {
+  width: 30%;
+  margin: 20px 35%; }
 
 .youtube-subscribe {
   display: block;

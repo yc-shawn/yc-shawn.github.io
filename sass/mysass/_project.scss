@@ -6,11 +6,18 @@
     font-size: 24px;
     padding: 20px;
   }
+  h2{
+    font-size: 22px;
+    text-align: center;
+  }
   p{
     text-align: center;
   }
   ol{
     padding: 10px 10%;
+  }
+  .ssis_sponsor{
+    color: rgba(28,80,165,1);
   }
 }
 
@@ -31,9 +38,13 @@
   }
 }
 
-.youtube-logo{
+.mid-img{
   width: 60%;
   margin: 20px 20%;
+}
+.sm-img{
+  width: 30%;
+  margin: 20px 35%;
 }
 .youtube-subscribe{
   display: block;
