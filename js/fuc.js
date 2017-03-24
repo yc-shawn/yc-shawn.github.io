@@ -66,7 +66,7 @@ function workLoad(){
   map['Youtube Channel'] = '1';
   map['Human In The Loop System Laboratory'] = '2';
   map['Signature sign in system'] = '3';
-  map['Local Life Service IOS Application<'] = '4';
+  map['Local Life Service IOS Application'] = '4';
   $('.thumb-unit').click(function(){
     var $this = $(this),
         newTitle = $this.find('strong').text();
