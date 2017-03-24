@@ -128,3 +128,29 @@ h3{
     padding-left: 5%;
   }
 }
+
+.resume-lockup{
+  max-width: 300px;
+  margin: 10px auto 70px auto;
+  a{
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    span{
+      color: black;
+      background-color: white;
+      padding: 0.6em 0.6em;
+      border: black solid 4px;
+      &:hover{
+        color: white;
+        background-color: black;
+        padding: 0.6em 0.6em;
+        border: black solid 4px;
+      }
+    }
+  }
+}
