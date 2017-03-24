@@ -1,0 +1,47 @@
+// ros tutorial
+.project-load{
+  font-size: 18px;
+  padding-bottom: 50px;
+  h1{
+    font-size: 24px;
+    padding: 20px;
+  }
+  p{
+    text-align: center;
+  }
+  ol{
+    padding: 10px 10%;
+  }
+}
+
+.video-box {
+	position: relative;
+	padding-bottom:45%; /* 9/16 */
+	padding-top:0px;
+	height:0;
+	margin: 20px auto;
+	width: 80%;
+
+  iframe {
+  	position: absolute;
+  	top:0;
+  	left:0;
+  	width:100%;
+  	height:100%;
+  }
+}
+
+.youtube-logo{
+  width: 60%;
+  margin: 20px 20%;
+}
+.youtube-subscribe{
+  display: block;
+  max-width: 200px;
+  margin: 20px auto;
+  img{
+    display: block;
+    max-width: 200px;
+    margin: 20px auto;
+  }
+}

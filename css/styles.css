@@ -269,7 +269,7 @@ h3 {
   transition: left 0.33s; }
 
 .ros-img {
-  background-image: url(../image/ROS_tutorial_cover.png); }
+  background-image: url(../image/youtubuChannel.jpeg); }
 
 .reco-img {
   background-image: url(../image/Multimodal_Recording.jpeg); }
@@ -294,15 +294,13 @@ h3 {
   display: block;
   width: 48%;
   margin: 1%;
-  /*height: 270px;*/
   float: left;
   position: relative;
   padding-top: 27%;
   overflow: hidden;
-  /*border-radius: 5px;*/
   background-position: center center;
   background-size: cover;
-  box-shadow: 2px 2px 8px 0 black;
+  box-shadow: 2px 2px 8px 0px darkgrey;
   -webkit-perspective: 300px;
   perspective: 300px;
   cursor: pointer; }
@@ -385,6 +383,17 @@ h3 {
   .work-container .project-title {
     margin-left: 50px; } }
 
+.project-load {
+  font-size: 18px;
+  padding-bottom: 50px; }
+  .project-load h1 {
+    font-size: 24px;
+    padding: 20px; }
+  .project-load p {
+    text-align: center; }
+  .project-load ol {
+    padding: 10px 10%; }
+
 .video-box {
   position: relative;
   padding-bottom: 45%;
@@ -399,6 +408,19 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%; }
+
+.youtube-logo {
+  width: 60%;
+  margin: 20px 20%; }
+
+.youtube-subscribe {
+  display: block;
+  max-width: 200px;
+  margin: 20px auto; }
+  .youtube-subscribe img {
+    display: block;
+    max-width: 200px;
+    margin: 20px auto; }
 
 img {
   width: 100%; }

@@ -5,6 +5,7 @@ $(document).ready(function(){
   workLoad();
   commentStuff();
   sideMenu()
+  $('.thumb-container a').attr('href', '#work');
   $("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
 });
 
@@ -37,7 +38,7 @@ function workBelt(){
 function workLoad(){
   $.ajaxSetup({ cache: true }); // save to cache to make more fast
   map = {};
-  map['ROS Tutorial Youtube Series'] = '1';
+  map['Youtube Channel'] = '1';
   map['MultiModal recording for activities recognition'] = '2';
   map['Signature sign in system'] = '3';
   map['iOS Application'] = '4';
