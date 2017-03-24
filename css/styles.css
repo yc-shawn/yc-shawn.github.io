@@ -373,7 +373,10 @@ h3 {
   cursor: pointer;
   position: relative;
   top: 35px;
-  left: -60px; }
+  left: -60px;
+  opacity: 0.7; }
+  .work-return:hover {
+    opacity: 1; }
 
 @media screen and (max-width: 740px) {
   .work-return {
