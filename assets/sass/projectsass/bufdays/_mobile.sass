@@ -1,0 +1,49 @@
+@media screen and (max-width: 700px)
+  $menuOffset: 150px
+  .bufdays
+    overflow-x: hidden
+    position: relative
+    right: 0
+    transition: right 0.33s ease
+    .buf-header-wrapper
+      transition: right 0.33s ease
+      .buf-header-box
+        .buf-toggle
+          @include eqsize(30px)
+          @include position(absolute, 5px, 10px, null, null)
+          @include background('nav-icon.png', contain, center, center, no-repeat)
+          z-index: 10
+          cursor: pointer
+        .logo-buf
+          display: none
+        .search-box
+          display: none
+        nav
+          margin: 0
+          @include size($menuOffset, 100%)
+          @include position(fixed, 0, -$menuOffset, null, null)
+          background: #333
+          transition: right 0.33s ease
+          .rightBut
+            display: block
+            width: 130px
+            margin: 10px
+            text-align: center
+            position: relative
+            p
+              float: none
+              padding: 0
+              @include completeCenter()
+    .left, .right
+      display: none
+    .main-section
+      margin: 0 5px
+  .buf-menu-open
+    right: $menuOffset
+    .buf-header-wrapper
+      right: $menuOffset
+      .buf-header-box
+        .logo
+          display: none
+        nav
+          right: 0

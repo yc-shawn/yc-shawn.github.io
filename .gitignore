@@ -1,3 +1,2 @@
-config.rb
-prepros-6.config
-.sass-cache
+package-lock.json
+node_modules

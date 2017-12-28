@@ -1,184 +1,82 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=http://www.ychen.site/" />
-  
-  <title>Yuxiang Chen</title>
-  <link href="image/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> -->
-  <link rel="stylesheet" href="css/spinner.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="yuxiang, chen, shawn, buffalo, developer, frontend, software, engineer, lilitofu, plateiq, plate, iq, front, end, react, anglar, node">
+    <meta name="author" content="Yuxiang Chen">
+    <meta name="description" content="Yuxiang Chen's Personal Website">
+    <link href="/assets/image/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+    <title>Yuxiang Chen's personal website</title>
+    <script src="/assets/libs/angular.1.6.5.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="/dist/app.css">
+  </head>
+  <body ng-app="homepage" ng-controller="homeCtrl">
 
-<body class="">
-<!-- header -->
-
-<header>
-  <div class="toggle"></div>
+    <!-- inject:templates/header.html --><header>
+  <div class="toggle" ng-click="toggleSideMenu()"></div>
   <div class="logo"></div>
   <nav>
-    <a href="#about_me">ABOUT ME</a>
-    <a href="#work">PORTFOLIO</a>
-    <a href="#comment">COMMENT</a>
-    <a href="#contact">CONTACT</a>
+    <a href="#about_me" ng-click="toggleSideMenu()">ABOUT ME</a>
+    <a href="#work" ng-click="toggleSideMenu()">PORTFOLIO</a>
+    <a href="#comment" ng-click="toggleSideMenu()">COMMENT</a>
+    <a href="#contact" ng-click="toggleSideMenu()">CONTACT</a>
   </nav>
-  <h1><span>YUXIANG CHEN</span></h1>
-  <p class="kicker"> SOFTWARE / FRONTEND / ENGINEER</p>
-  <!-- back to top button -->
-  <a class="back-to-top" href=""></a>
-</header>
+  <div class="nameTag">
+    <h1><span>YUXIANG CHEN</span></h1>
+    <p class="kicker">SOFTWARE / FRONTEND / ENGINEER</p>
+  </div>
 
-<!-- about me section -->
-<section>
-  <h3 id="about_me">ABOUT ME</h3>
+  <a class="back-to-top"></a>
+
+</header>
+<!-- endinject -->
+
+    <!-- inject:templates/aboutme.html --><section>
+  <h3 id="about_me" class="index-section-title">ABOUT ME</h3>
   <div class="face-lockup">
-    <div class="face-img"></div>
+    <img src="/assets/image/MyPortrait.png" class="face-img" alt="">
     <div class="icon1"></div>
     <div class="icon2"></div>
     <div class="icon3"></div>
     <div class="icon4"></div>
   </div>
   <div class="blurb">
-    <p>Hi, I'm yuxiang chen, people also call me Shawn, <strong>I'm Seeking for full-time job opportunities as a software engineer.</strong> </p>
-    <p>I'm Strong in design and integration problem-solving skills. Expert in <strong>Java, Python, C++, OOD</strong>.
-  	Skilled in <strong>front-end developing (Web & IOS)</strong>, machine learning, and data science.
-  	Highly adaptable in quickly changing technical environments with very strong organizational and analytical skills</p>
+    <p>Hi, I'm <b>Yuxiang Chen</b>, people also call me <b>Shawn</b>,
+      I'm a <b>Software Engineer(Front-end) at <a href="https://www.plateiq.com" target="_blank">Plate IQ</a></b>
+    </p>
+    <p>I'm strong in design and integration problem-solving. Expert in <strong>Java, Javascript, NodeJS, ReactJS, AngularJS</strong>.
+  	Skilled in <strong>front-end developing (Web & IOS)</strong>.
+  	Highly adaptable in quickly changing technical environments with very strong organizational and analytical skills.</p>
   </div>
   <!-- Skill-lockup -->
   <div class="skill-lockup">
-
-    <div class="skill-unit">
-      <div class="skill-label">Java</div>
-      <div class="skill-icon">
-        <span></span><span></span><span></span><span></span><span></span>
+    <div class="skill-unit" ng-repeat="skill in skills">
+      <div class="skill-label">{{ skill }}</div>
+      <div class="{{'skill-icon skill-' + levels[skill] }}">
+       <span ng-repeat="n in [1,2,3,4,5]"></span>
       </div>
     </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">Python</div>
-      <div class="skill-icon skill-4">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">C#</div>
-      <div class="skill-icon skill-3">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">Swift</div>
-      <div class="skill-icon skill-4">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">C++</div>
-      <div class="skill-icon skill-3">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">HTML/XHTML</div>
-      <div class="skill-icon skill-4">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">CSS/SASS/SCSS</div>
-      <div class="skill-icon skill-4">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">Javascript</div>
-      <div class="skill-icon skill-3">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">SQL/NoSQL</div>
-      <div class="skill-icon skill-2">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">React/Redux</div>
-      <div class="skill-icon skill-3">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">NodeJS</div>
-      <div class="skill-icon skill-2">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-    <div class="skill-unit">
-      <div class="skill-label">MATLAB</div>
-      <div class="skill-icon skill-4">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-
-
   </div>
   <!-- Resume -->
   <div class="resume-lockup">
-    <a href="others/Yuxiang_Chen_Resume_March_2017.pdf" target="_blank"><span class="resume">SEE MY RESUME</span></a>
+    <a href="assets/documents/Yuxiang_Chen_Resume_April_2017.pdf" target="_blank">SEE MY RESUME</a>
   </div>
 </section>
-
-<!-- work section -->
-<section class="alt-section section-work">
-  <h3 id="work">PORTFOLIO</h3>
-
+<!-- endinject -->
+    <!-- inject:templates/works.html --><section class="alt-section section-work">
+  <h3 id="work" class="index-section-title">PORTFOLIO</h3>
   <div class="work-belt">
     <div class="thumb-wrap">
       <div class="thumb-container">
-
-        <!-- project 1 -->
-        <a class="thumb-unit ros-img">
+        <a
+          ng-repeat="proj in projects"
+          ng-href="{{ proj.url }}"
+          class="{{ 'thumb-unit ' + proj.img }}"
+          ng-click="chooseProj($index)">
           <div class="thumb-overlay">
-            <strong>Youtube Channel</strong>
-            <div class="zoom-icon"></div>
-          </div>
-        </a>
-
-        <!-- project 2 -->
-        <a class="thumb-unit reco-img">
-          <div class="thumb-overlay">
-            <strong>Human In The Loop System Laboratory</strong>
-            <div class="zoom-icon"></div>
-          </div>
-        </a>
-
-        <!-- project 3 -->
-        <a class="thumb-unit signature-img">
-          <div class="thumb-overlay">
-            <strong>Signature sign in system</strong>
-            <div class="zoom-icon"></div>
-          </div>
-        </a>
-        <!-- project 4 -->
-        <a class="thumb-unit iosapp-img">
-          <div class="thumb-overlay">
-            <strong>Local Life Service IOS Application</strong>
-            <div class="zoom-icon"></div>
+            <strong>{{ proj.title }}</strong>
           </div>
         </a>
       </div>
@@ -187,102 +85,88 @@
     <div class="work-wrap">
       <div class="work-container">
         <div class="work-return"></div>
-        <h4 class="project-title"></h4>
-        <div class="project-load"></div>
+        <h4 class="project-title">{{ projects[curProjIndex].title }}</h4>
+        <div class="project-load">
+          <div ng-include="'/apps/homepage/src/templates/work/youtube-channel.html'" ng-show="curProjIndex === 5"></div>
+          <div ng-include="'/apps/homepage/src/templates/work/HILS-lab.html'" ng-show="curProjIndex === 6"></div>
+          <div ng-include="'/apps/homepage/src/templates/work/local-life-ios.html'" ng-show="curProjIndex === 7"></div>
+          <div ng-include="'/apps/homepage/src/templates/work/signature-sign-in-system.html'" ng-show="curProjIndex === 8"></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- Comment -->
-<section class="section-comment">
-  <h3 id="comment">COMMENT</h3>
+<!-- endinject -->
+    <!-- inject:templates/comment.html --><section class="section-comment">
+  <h3 id="comment" class="index-section-title">COMMENT</h3>
 
   <div class="comment-mobile-nav">
     <!-- <span></span> <span></span> <span></span> <span></span> -->
   </div>
 
   <div class="control">
-    <div class="control-pre"><img src="../image/control-pre.png" alt="control-pre"></div>
-    <div class="control-next"><img src="../image/control-next.png" alt="control-next"></div>
+    <div class="control-pre"><img src="/assets/image/control-pre.png" alt="control-pre"></div>
+    <div class="control-next"><img src="/assets/image/control-next.png" alt="control-next"></div>
   </div>
 
   <div class="comment-belt">
-    <!-- comment 1 -->
+    <!-- Comment 1 -->
     <div class="comment-unit">
       <div class="comment-info">
-        <img src="image/yiminghu_avatar.jpg" alt="avatar">
+        <img src="/assets/image/peter_avatar.jpg" alt="avatar">
+        <strong class="comment-name">Peter Fioretti</strong>
+        <div class="comment-title">Founder, Synchronyze Inc.</div>
+      </div>
+      <div class="comment-content">
+        <div class="quote"></div>
+        <p>I met Shawn in my first trip to Silicon Valley. He immediatly impressed me for his hard work and dedication. When he talks you can hear passion flowing through your ears, not just words.</p>
+      </div>
+    </div>
+
+    <!-- Comment 2 -->
+    <div class="comment-unit">
+      <div class="comment-info">
+        <img src="/assets/image/geok_avatar.jpg" alt="avatar">
+        <strong class="comment-name">Geok Hui Koh</strong>
+        <div class="comment-title">Founder, Lilitofu</div>
+      </div>
+      <div class="comment-content">
+        <div class="quote"></div>
+        <p>Shawn is a strong team player and often going above and beyond to help his peers even if the issues are outside his immediate scope of responsibilities. He’s led team on-boarding session for new interns, curated good learning resources to share, and is quick to step up and guide other teams through roadblocks.</p>
+      </div>
+    </div>
+
+    <!-- Comment 3 -->
+    <div class="comment-unit">
+      <div class="comment-info">
+        <img src="/assets/image/yiminghu_avatar.jpg" alt="avatar">
         <strong class="comment-name">Yiming Hu</strong>
         <div class="comment-title">Product Manager, Laiye Inc.</div>
       </div>
       <div class="comment-content">
         <div class="quote"></div>
-        <p>Shawn is one of the few people that I've ever met with strong self-learning ability and solid programming technics. I believe he could create greater value to his organization</p>
+        <p>Shawn is one of the few people that I've ever met with strong self-learning ability and solid programming technics. I believe he could create greater value to his organization.</p>
       </div>
     </div>
-    <!--
-
-    <div class="comment-unit">
-      <div class="comment-info">
-        <img src="image/at01.png" alt="avatar">
-        <strong class="comment-name">James Anderson</strong>
-        <div class="comment-title">Front end developer</div>
-      </div>
-      <div class="comment-content">
-        <div class="quote"></div>
-        <p>A condemning collar joins with an eyesight under an equivalent controversy. When can the tried valley chain a mundane poster. A shock hurries a volunteer unseen inside the reform. Does a vehicle reside in my stamp</p>
-      </div>
-    </div>
-
-    <div class="comment-unit">
-      <div class="comment-info">
-        <img src="image/at02.png" alt="avatar">
-        <strong class="comment-name">Ashley Ford</strong>
-        <div class="comment-title">Creative Developer / Designer</div>
-      </div>
-      <div class="comment-content">
-        <div class="quote"></div>
-        <p>The singular grass boggles. The relaxed circular defends our lover opposite whatever imaginative reign. How can the sailing defeat bolt. The addict listens over the directive zone.</p>
-      </div>
-    </div>
-
-    <div class="comment-unit">
-      <div class="comment-info">
-        <img src="image/at03.png" alt="avatar">
-        <strong class="comment-name">Dan Counsell</strong>
-        <div class="comment-title">Founder of Realmac Software</div>
-      </div>
-      <div class="comment-content">
-        <div class="quote"></div>
-        <p>With the quiz prevails every electorate. The book straws the pole. An event nicks an orthodox rail. The arguable sect footnotes the cobbler past the convenient chemist. This chorus coughs. A desktop fleshes my umbrella.</p>
-      </div>
-    </div>
-    //-->
   </div>
-  <!-- <div class="comment-logo">
-    <div class="single-logo"><img src="../image/ros-logo.png" alt="logo"></div>
-    <div class="single-logo"><img src="../image/facebook_logo_128x.png" alt="logo"></div>
-    <div class="single-logo"><img src="../image/HILS_logo.png" alt="logo"></div>
-    <div class="single-logo"><img src="../image/TJPU_logo.png" alt="logo"></div>
-  </div> -->
 </section>
-
-<!-- contact -->
-<section class="alt-section section-contact">
-  <h3 id="contact">CONTACT</h3>
+<!-- endinject -->
+    <!-- inject:templates/contact.html --><section class="alt-section section-contact" style="background-image: url(/assets/image/road_sit_right_21_9.jpg); background-size: cover;">
+  <h3 id="contact" class="index-section-title">CONTACT</h3>
   <div class="social-link">
-    <a href="https://www.linkedin.com/in/ychen248" target="_blank"><img src="/image/linkedin_logo_128x.png"></a>
-    <a href="https://www.facebook.com/shawnloatrchen" target="_blank"><img src="/image/facebook_logo_128x.png"></a>
-    <a href="https://www.youtube.com/channel/UCQLEPbkEmwz4mABAV-kzQTQ" target="_blank"><img src="../image/youtube_logo_128x.png"></a>
-    <a href="https://github.com/shawnLOATRchen" target="_blank"><img src="/image/github-512.png"></a>
+    <a href="https://www.linkedin.com/in/ychen248" target="_blank"><img src="/assets/image/linkedin_logo_128x.png"></a>
+    <a href="https://www.facebook.com/shawnloatrchen" target="_blank"><img src="/assets/image/facebook_logo_128x.png"></a>
+    <a href="https://www.instagram.com/shawnloatr/" target="_blank"><img src="/assets/image/instagram_128x.png"></a>
+    <a href="https://www.youtube.com/channel/UCQLEPbkEmwz4mABAV-kzQTQ" target="_blank"><img src="/assets/image/youtube_logo_128x.png"></a>
+    <a href="https://github.com/shawnLOATRchen" target="_blank"><img src="/assets/image/github-512.png"></a>
   </div>
   <p class="contact-info">ychen248@buffalo.edu</p>
-  <p class="contact-info">Mountain View, CA</p>
-  <form name="htmlform" method="post" action="https://formspree.io/ychen248@buffalo.edu">
+  <p class="contact-info">Oakland, CA</p>
+  <form class="contactForm" name="htmlform" method="post" action="https://formspree.io/ychen248@buffalo.edu">
 
     <div class="contact-info-group">
-      <label><span>Your Name</span><input type="text" name="name"></label>
-      <label><span>Your Email</span><input type="email" name="_replyto"></label>
+      <label><span>Your Name</span><input type="text" name="name" required="true"></label>
+      <label><span>Your Email</span><input type="email" name="_replyto" required="true"></label>
     </div>
 
     <label><span>Message</span><textarea name="message"></textarea></label>
@@ -290,25 +174,17 @@
   </form>
 
 </section>
+<!-- endinject -->
 
-<!-- footer -->
-<footer>
-  <div class="lockup">
-    <div class="logo"></div>
-    <div class="content-warp">
-      <nav>
-        <a href="#about_me">ABOUT ME</a>
-        <a href="#work">PORTFOLIO</a>
-        <a href="#comment">COMMENT</a>
-        <a href="">CONTACT</a>
-      </nav>
-      <p class="copyright">&copy 2017 yuxiang chen all rights reserved.</p>
-    </div>
-  </div>
-
+    <!-- inject:templates/footer.html --><footer>
+  <div class="logo"></div>
+  <p class="copyright">&copy 2017 yuxiang chen all rights reserved.</p>
 </footer>
+<!-- endinject -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/fuc.js"></script>
-</body>
+    <!-- scripts -->
+    <script src="/assets/libs/jquery.3.1.1.min.js"></script>
+    <script src="/assets/libs/scrollreveal.3.3.6.min.js"></script>
+    <script src="/dist/app.js"></script>
+  </body>
 </html>

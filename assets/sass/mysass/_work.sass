@@ -1,0 +1,108 @@
+.section-work
+  overflow: hidden
+.ros-img
+  background-image: url(/assets/image/youtubuChannel.jpeg)
+.reco-img
+  background-image: url(/assets/image/HILS-lab-thumb.jpeg)
+.iosapp-img
+  background-image: url(/assets/image/iosapp.png)
+.signature-img
+  background-image: url(/assets/image/SignatureSignInCover.jpeg)
+.todo-img
+  background-image: url(/assets/image/todo-cover.jpg)
+.chat-img
+  background-image: url(/assets/image/chat-cover.jpg)
+.spotifyplaylist-img
+  background-image: url(/assets/image/spotifyplaylist-cover.jpg)
+.craigslist-img
+  background-image: url(/assets/image/craigslist-cover.png)
+.shoppingcart-img
+  background-image: url(/assets/image/shoppingcart-cover.png)
+
+.work-belt
+  @include position(relative, null, null, null, 0%)
+  width: 200%
+  transition: left 0.33s
+  .thumb-wrap, .work-wrap
+    width: 50%
+    float: left
+    padding-bottom: 100px
+
+.thumb-container
+  max-width: 960px
+  margin: 0 auto
+  overflow: auto
+  display: flex
+  flex-wrap: wrap
+  .thumb-unit
+    display: block
+    width: 33.33333%
+    float: left
+    position: relative
+    padding-top: 18.7%
+    overflow: hidden
+    background-position: center center
+    background-size: cover
+    box-shadow: 2px 2px 8px 0px darkgrey
+    perspective: 300px
+    cursor: pointer
+    &:hover .thumb-overlay
+      top: 0%
+      background: darkgrey
+      opacity: 0.9
+      transform: rotateX(0deg)
+    @media (max-width:840px)
+      width: 50%
+      padding-top: 28.125%
+    @media screen and (max-width:540px)
+      width: 100%
+      padding-top: 56.25%
+    .thumb-overlay
+      @include position(absolute, 100%, 0, 0, 0)
+      height: 100%
+      text-align: center
+      opacity: 0
+      display: flex
+      align-items: center
+      justify-content: space-around
+      transition: transform 0.33s, top 0.33s
+      transform: rotateX(90deg)
+      transform-origin: bottom
+      strong
+        display: block
+        padding: 20px
+        color: white
+        font-weight: 300
+        text-transform: uppercase
+        font-size: 24px
+      line-height: 1.2
+
+.work-container
+  max-width: 640px
+  margin: 0 auto
+  display: none
+  img
+    max-width: 100%
+    margin-bottom: 20px
+  .project-title
+    font-size: 24px
+    line-height: 1.2
+    font-weight: 300
+    text-transform: uppercase
+    margin: 0 0 20px
+  .work-return
+    @include eqsize(40px)
+    @include background('return-icon.png', cover, center, center, no-repeat)
+    @include position(relative, 35%, null, null, -60px)
+    cursor: pointer
+    opacity: 0.4
+    &:hover
+      opacity: 0.75
+
+@media screen and (max-width:740px)
+  .work-container
+    margin: 0 10px
+    .work-return
+      left: 0px
+  .work-container .project-title
+    margin-left: 50px

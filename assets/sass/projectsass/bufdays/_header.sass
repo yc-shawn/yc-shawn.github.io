@@ -1,0 +1,81 @@
+@mixin headerItem
+  background-color: #4d97c1
+  border-radius: 5px
+  border: none
+.bufdays
+  a
+    color: inherit
+    &:visited
+      color: inherit
+  .buf-header-wrapper
+    @include position(fixed, 0, 0, null, 0)
+    z-index: 1
+    height: 40px
+    padding: 5px
+    background-color: #026AA7
+    color: white
+    .buf-header-box
+      max-width: 960px
+      margin: 0 auto
+      .logo-buf
+        @include eqsize(28px)
+        float: left
+        padding: 1px 10px 1px 5px
+      .search-box
+        @include size(130px, 28px)
+        @include headerItem()
+        float: left
+        padding: 1px 5px
+        transition: width 0.2s ease-in-out
+        &::-webkit-input-placeholder
+          color: white
+        &:hover
+          background-color: #62a2c8
+        &:focus
+          background: white
+          width: 185px
+      .search-but
+        @include eqsize(18px)
+        float: left
+        margin: 6px 0 6px 10px
+      .logo
+        @include size(auto, 20px)
+        @include completeCenter()
+      .buf-toggle
+        height: 0
+      nav
+        float: right
+        .rightBut
+          @include size(auto, 30px)
+          @include headerItem()
+          display: inline-block
+          margin-left: 10px
+          &:hover
+            background-color: #62a2c8
+          img
+            float: left
+            @include eqsize(14px)
+            margin: 8px
+          p
+            float: left
+            padding: 0 8px 0 0
+            text-align: center
+            margin: 0
+            line-height: 30px
+  .back-to-index
+    float: left
+    &:hover
+      color: #62a2c8
+    img
+      float: left
+      @include size(auto, 14px)
+      padding: 8px 0
+    p
+      float: left
+      padding: 0 0 0 8px
+      text-align: center
+      margin: 0
+      line-height: 30px
+  .buf-container
+    max-width: 960px
+    margin: 50px auto 0 auto

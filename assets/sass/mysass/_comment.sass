@@ -1,0 +1,89 @@
+.section-comment
+  position: relative
+
+.control
+  @include position(absolute, 202px, 0, 0, 0)
+  max-width: 1000px
+  margin: auto
+  z-index: 1
+  div
+    width: 25px
+    opacity: 0.4
+  .control-pre, .control-next
+    @include position(absolute, 90px, null, null, null)
+    cursor: pointer
+    // z-index: +1;
+    &:hover
+      opacity: 0.8
+  .control-pre
+    left: 10px
+  .control-next
+    right: 10px
+
+.comment-belt
+  width: 100%
+  position: relative
+  .comment-unit
+    display: none
+    position: relative
+    max-width: 740px
+    margin: 50px auto
+    &.active-people
+      display: flex
+    .comment-info
+      min-width: 280px
+      text-align: center
+      img
+        max-width: 128px
+        border-radius: 50%
+      .comment-name
+        display: block
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-weight: 400
+      .comment-title
+        color: #999
+    .comment-content
+      position: relative
+      font-size: 18px
+      font-weight: 300
+      line-height: 36px
+      .quote
+        @include position(absolute, 0, null, null, -30px)
+        @include background('quote.jpg', contain, center, center, no-repeat)
+        @include eqsize(60px)
+        z-index: -1
+        opacity: 0.3
+
+.comment-mobile-nav
+  text-align: center
+  span
+    @include eqsize(16px)
+    cursor: pointer
+    display: inline-block
+    border-radius: 50%
+    border: solid 2px lightgrey
+    margin: 0 10px
+    &:hover
+      border-color: darkgrey
+    &.active-logo
+      border-color: black
+
+@media screen and (max-width: 840px)
+  .control
+    div
+      width: 17.5px
+  .comment-belt
+    .comment-unit
+      position: relative
+      // margin-left: 0px;
+      left: auto
+      &.active-people
+        display: block
+      .comment-info
+        margin-bottom: 20px
+      .comment-content
+        margin: 0px 10%
+        .quote
+          left: -15px
+          top: -30px

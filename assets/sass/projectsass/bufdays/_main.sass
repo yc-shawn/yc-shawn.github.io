@@ -1,0 +1,79 @@
+.bufdays
+  .main-section
+    margin: 0 190px auto 170px
+    .home-cate-mobile
+      display: none
+    .top-category
+      margin-bottom: 10px
+      .top-name
+        margin: 0
+        padding: 8px
+      ul li
+        margin: 5px 0 5px 5px
+
+    @media screen and (max-width: 414px)
+      .home-cate-desktop
+        display: none
+      .home-cate-mobile
+        display: block
+        padding-top: 10px
+        .mobile-cate-cell
+          display: inline-block
+          width: 25%
+          img
+            @include eqsize(60px)
+            display: block
+            margin: 0 auto
+          p
+            text-align: center
+
+  .feed
+    @include mian-box()
+    .feed-header
+      margin: 0
+      padding: 5px
+      font-size: 110%
+      box-shadow: 0px 1px 0px 0px #e9ebee
+    .feed-cell
+      display: block
+      // height: 80px
+      padding: 5px 0
+      margin: 0 7.5px
+      box-shadow: 0px 1px 0px 0px #e9ebee
+      &:hover
+        background-color: #e9ebee
+      &:last-child
+        box-shadow: none
+      .CellImg-box
+        max-height: 80px
+        overflow: hidden
+        .feedImg
+          @include eqsize(80px)
+          margin-right: 10px
+          display: inline-block
+          background-position: center center
+          background-size: cover
+      .feed-cell-info
+        position: relative
+        .category
+          margin: 0
+          font-size: 90%
+          color: #2baf30
+        .date
+          @include position(absolute, 0, 5px, null, null)
+          margin: 0
+          font-weight: 300
+          font-size: 90%
+        .title
+          color: black
+          margin: 8px 8px 8px 0
+          white-space: nowrap
+          overflow: hidden
+          text-overflow: ellipsis
+        .content
+          margin: 8px 0
+          font-size: 90%
+          line-height: 22px
+          max-height: 44px
+          overflow: hidden
+          text-overflow: ellipsis

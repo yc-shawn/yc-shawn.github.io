@@ -1,0 +1,115 @@
+$playlistMainColor: #181818
+$playlistAltColor: #383838
+$boundryWidth: 800px
+
+.spotify-playlist, .spotify-jumbotron
+  max-width: 960px
+  margin: 0 auto
+  background-color: $playlistMainColor
+  color: #919191
+  padding-bottom: 20px
+  @media (max-width: 800px)
+    width: 100%
+  .logoBox
+    text-align: center
+    padding-top: 32px
+    a
+      @include size(auto, 30px)
+      img
+        @include size(auto, 30px)
+  .spotify-jumbotron
+    padding-top: 32px
+  #spotify-search-box
+    max-width: 720px
+    #spotify-search-select
+      padding-left: 0
+      .form-control
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+        border-color: #cccccc
+    #spotify-search-input
+      padding-right: 0
+      .form-control
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+        border-color: white
+  h1, p
+    color: #ccc
+    text-align: center
+    margin: 20px
+    font-weight: 300
+  h1
+    font-size: 48px
+  .search-result-list
+    max-width: 690px
+    margin: 10px auto
+    padding: 10px 30% 10px 10px
+    @media screen and (max-width: 420px)
+      padding: 10px
+    background-color: #222222
+    border-radius: 5px
+    a
+      color: #ddd
+      background-color: #191919
+      border-color: #191919
+      max-width: 100%
+      overflow: hidden
+  .spotify-nav-back
+    padding: 20px 0
+    img
+      @include size(auto, 25px)
+      padding: 5px
+    div
+      cursor: pointer
+      display: inline-block
+      line-height: 25px
+  .album-wrapper
+    column-count: 4
+    column-gap: 0px
+    column-fill: auto
+    @media (max-width: 768px)
+      column-count: 3
+    @media screen and (max-width: 576px)
+      column-count: 2
+    @media screen and (max-width: 414px)
+      column-count: 1
+    .card-holder
+      display: inline-block
+      position: relative
+      // column-break-inside: avoid
+      .card
+        margin: 10px
+  .track-list
+    margin: 0
+    padding-bottom: 10px
+    .ablum-info
+      margin: 20px
+      .img-box
+        margin: 10px auto
+      h3, h4
+        margin-top: 10px
+        font-weight: 300
+    .track-box
+      counter-increment: item
+      background-color: #222222
+      border-radius: 5px
+      margin: 10px
+      padding: 10px
+      &:before
+        content: counter(item)
+        color: #ababab
+        width: 1.4em
+        font-size: 30px
+        line-height: 44px
+        text-align: center
+        float: left
+      p
+        margin: 5px 60px
+        font-size: 16px
+        text-align: left
+        min-height: 34px
+      a
+        @include eqsize(36px)
+        @include background('Spotify_logo_s.png', contain, center, center, no-repeat)
+        float: right
+        margin: 4px 0

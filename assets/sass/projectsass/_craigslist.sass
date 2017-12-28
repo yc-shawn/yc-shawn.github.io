@@ -1,0 +1,77 @@
+.cra-home-nav .navbar-brand
+  img
+    @include size(auto, 32px)
+    margin: 4px auto
+
+
+.cra-home-container
+  column-count: 3
+  column-gap: 0px
+  column-fill: auto
+  @media screen and (max-width: 992px)
+    column-count: 2
+  @media (max-width: 768px)
+    column-count: 1
+  .card-holder
+    display: inline-block
+    width: 100%
+    .card
+      display: block
+      margin: 10px
+      .card-block
+        padding: 10px 20px
+        .topcate
+          color: inherit
+          font-size: 18px
+          text-transform: capitalize
+      hr
+        margin: 0 10px 5px 10px
+      .subcate-list
+        margin: 0
+        padding: 10px
+        list-style: none
+        a
+          display: inline-block
+          font-size: 13px
+          padding: 4px 6px
+          margin: 0 6px 8px 0
+          border: 1px solid lightgrey
+          border-radius: 4px
+
+.cra-single-cate
+  .breadcrumb
+    margin-top: 10px
+  .waterfall
+    column-count: 4
+    column-gap: 0px
+    column-fill: auto
+    @media (max-width: 992px)
+      column-count: 3
+    @media (max-width: 768px)
+      column-count: 2
+    @media screen and (max-width: 576px)
+      column-count: 1
+    .card-holder
+      display: inline-block
+      width: 100%
+      .card
+        display: block
+        margin: 10px
+
+.cra-detail-container
+  #cra-detail-carousel
+    margin: 10px -15px
+    background-color: #111111
+    .carousel-item
+      @media (max-width: 768px)
+        height: 430px
+      @media (max-width: 576px)
+        height: 337px
+      @media screen and (max-width: 467px)
+        height: 240px
+      img
+        @include size(auto, 100%)
+        margin: 0 auto
+  .cra-detail-title
+    margin-top: 20px
+    color: inherit

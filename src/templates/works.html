@@ -1,0 +1,31 @@
+<section class="alt-section section-work">
+  <h3 id="work" class="index-section-title">PORTFOLIO</h3>
+  <div class="work-belt">
+    <div class="thumb-wrap">
+      <div class="thumb-container">
+        <a
+          ng-repeat="proj in projects"
+          ng-href="{{ proj.url }}"
+          class="{{ 'thumb-unit ' + proj.img }}"
+          ng-click="chooseProj($index)">
+          <div class="thumb-overlay">
+            <strong>{{ proj.title }}</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="work-wrap">
+      <div class="work-container">
+        <div class="work-return"></div>
+        <h4 class="project-title">{{ projects[curProjIndex].title }}</h4>
+        <div class="project-load">
+          <div ng-include="'/apps/homepage/src/templates/work/youtube-channel.html'" ng-show="curProjIndex === 5"></div>
+          <div ng-include="'/apps/homepage/src/templates/work/HILS-lab.html'" ng-show="curProjIndex === 6"></div>
+          <div ng-include="'/apps/homepage/src/templates/work/local-life-ios.html'" ng-show="curProjIndex === 7"></div>
+          <div ng-include="'/apps/homepage/src/templates/work/signature-sign-in-system.html'" ng-show="curProjIndex === 8"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

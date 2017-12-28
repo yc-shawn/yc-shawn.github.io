@@ -1,0 +1,16 @@
+footer
+  @include background('indexCover.jpg', cover, center, center, no-repeat)
+  height: 80px
+  position: relative
+  .logo
+    @include size(80px, 40px)
+    @include background('mylogo.png', contain, center, center, no-repeat)
+    @include position(absolute, 50%, null, null, 30px)
+    transform: translateY(-50%)
+  .copyright
+    margin: 0
+    padding-right: 20px
+    font-size: 12px
+    color: rgba(255, 255, 255, 0.75)
+    @include position(absolute, 50%, null, null, 140px)
+    transform: translateY(-50%)

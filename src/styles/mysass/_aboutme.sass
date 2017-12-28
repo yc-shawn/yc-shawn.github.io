@@ -1,0 +1,100 @@
+.face-lockup
+  max-width: 780px
+  display: flex
+  margin: 0 auto
+  align-items: center
+  justify-content: space-between
+  .face-img
+    @include eqsize(200px)
+    border-radius: 50%
+    order: 3
+  .icon1
+    @include background('code.png', null, center, center, no-repeat)
+    order: 1
+  .icon2
+    @include background('cogs.png', null, center, center, no-repeat)
+    order: 2
+  .icon3
+    @include background('clock.png', null, center, center, no-repeat)
+    order: 4
+  .icon4
+    @include background('pencil.png', null, center, center, no-repeat)
+    order: 5
+  .icon1, .icon2, .icon3, .icon4
+    @include eqsize(60px)
+    opacity: 0.6
+    background-color: lightgrey
+    background-repeat: no-repeat
+    border-radius: 50%
+.blurb
+  max-width: 620px
+  padding: 0 15px
+  margin: 50px auto
+  font-size: 20px
+  text-align: center
+  font-weight: 300
+
+@media screen and (max-width: 650px)
+  .face-lockup
+    display: block
+    text-align: center
+    div
+      display: inline-block
+    .face-img
+      display: block
+      margin: 0 auto 30px auto
+    .icon1, .icon2, .icon3, .icon4
+      margin: 5px
+
+// skill part
+.skill-lockup
+  max-width: 700px
+  margin: 100px auto
+  color: #999
+  overflow: auto
+  .skill-unit
+    width: 23%
+    padding-left: 10%
+    float: left
+    @for $i from 1 through 5
+      .skill-#{$i} span:nth-child(n+#{$i+1})
+        background-color: lightgrey
+    .skill-icon
+      margin: 2px 0 30px
+      span
+        @include eqsize(14px)
+        display: inline-block
+        background-color: black
+        margin-right: 5px
+        border-radius: 50%
+        &:after
+          @include eqsize(10px)
+          content: ''
+          display: block
+          background: #fff
+          border-radius: 50%
+          margin: 2px
+
+@media screen and (max-width: 541px)
+  .skill-lockup
+    margin-left: 25px
+    .skill-unit
+      width: 45%
+      padding-left: 5%
+
+
+// resume part
+.resume-lockup
+  max-width: 300px
+  margin: 10px auto 70px auto
+  text-align: center
+  a
+    font-size: 16px
+    line-height: 20px
+    color: black
+    background-color: white
+    padding: 0.6em 0.6em
+    border: black solid 4px
+    &:hover
+      color: white
+      background-color: black

@@ -1,0 +1,36 @@
+.bufdays
+  .sideBox
+    @include mian-box()
+    margin-bottom: 10px
+    text-align: center
+    ul
+      margin: 0
+      li
+        box-shadow: 0px 1px 0px 0px #e9ebee
+        padding: 4px 0
+        margin: 0 5px
+        &:hover
+          background-color: #e9ebee
+        &:last-child
+          box-shadow: none
+        &:first-child
+          margin: 0
+          padding: 8px 0
+          background-color: #f6f7f9
+          &:hover
+            background-color: #f6f7f9
+
+  .left
+    float: left
+    width: 160px
+    .site-info
+      color: darkgrey
+      text-align: center
+      font-size: 85%
+      font-weight: 300
+      a:hover
+        color: black
+        font-weight: normal
+  .right
+    float: right
+    width: 180px

@@ -1,0 +1,60 @@
+@mixin eqsize($size)
+  width: $size
+  height: $size
+
+@mixin size($width, $height)
+  width: $width
+  height: $height
+
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null)
+  position: $position
+  top: $top
+  right: $right
+  bottom: $bottom
+  left: $left
+
+@mixin background($name, $size: auto, $posH: center, $posV: center, $repeat: no-repeat)
+  $url: "/assets/image/#{$name}"
+  background: url($url) $posH $posV
+  background-size: $size
+  background-repeat: $repeat
+
+@mixin horizontalCenter()
+  @include position(absolute, null, null, null, 50%)
+  transform: translateX(-50%)
+
+@mixin verticalCenter()
+  @include position(absolute, 50%, null, null, null)
+  transform: translateY(-50%)
+
+@mixin completeCenter()
+  @include position(absolute, 50%, null, null, 50%)
+  transform: translate(-50%, -50%)
+
+@mixin lightPlacehoder()
+  ::-webkit-input-placeholder
+    opacity: 0.5
+  :-ms-input-placeholder
+    opacity: 0.5
+  ::-moz-placeholder
+    opacity: 0.5
+  :-moz-placeholder
+    opacity: 0.5
+
+// custom function
+@mixin mian-box()
+  background-color: white
+  border-radius: 3px
+  border: 1px solid lightgrey
+
+@mixin sub-page-normal-container()
+  @include mian-box()
+  background-color: white
+  margin: 50px auto auto auto
+  padding: 7.5px 10px
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24)
+  font-size: 16px
+  @media screen and (max-width: 414px)
+    margin: 50px 5px 10px 5px
+    font-size: 14px

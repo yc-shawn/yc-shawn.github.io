@@ -1,0 +1,31 @@
+<section>
+  <h3 id="about_me" class="index-section-title">ABOUT ME</h3>
+  <div class="face-lockup">
+    <img src="/assets/image/MyPortrait.png" class="face-img" alt="">
+    <div class="icon1"></div>
+    <div class="icon2"></div>
+    <div class="icon3"></div>
+    <div class="icon4"></div>
+  </div>
+  <div class="blurb">
+    <p>Hi, I'm <b>Yuxiang Chen</b>, people also call me <b>Shawn</b>,
+      I'm a <b>Software Engineer(Front-end) at <a href="https://www.plateiq.com" target="_blank">Plate IQ</a></b>
+    </p>
+    <p>I'm strong in design and integration problem-solving. Expert in <strong>Java, Javascript, NodeJS, ReactJS, AngularJS</strong>.
+  	Skilled in <strong>front-end developing (Web & IOS)</strong>.
+  	Highly adaptable in quickly changing technical environments with very strong organizational and analytical skills.</p>
+  </div>
+  <!-- Skill-lockup -->
+  <div class="skill-lockup">
+    <div class="skill-unit" ng-repeat="skill in skills">
+      <div class="skill-label">{{ skill }}</div>
+      <div class="{{'skill-icon skill-' + levels[skill] }}">
+       <span ng-repeat="n in [1,2,3,4,5]"></span>
+      </div>
+    </div>
+  </div>
+  <!-- Resume -->
+  <div class="resume-lockup">
+    <a href="assets/documents/Yuxiang_Chen_Resume_April_2017.pdf" target="_blank">SEE MY RESUME</a>
+  </div>
+</section>
