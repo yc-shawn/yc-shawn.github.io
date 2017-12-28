@@ -10,7 +10,8 @@
     <link href="/assets/image/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
     <title>Yuxiang Chen's personal website</title>
 
-    <!-- Angular Material style sheet -->
+    <!-- style sheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/libs/angular-material.1.6.5.min.css">
 
     <!-- Angular Library -->
@@ -162,18 +163,39 @@
   </div>
 </section>
 <!-- endinject -->
-    <!-- inject:templates/contact.html --><section class="alt-section section-contact" style="background-image: url(/assets/image/road_sit_right_21_9.jpg); background-size: cover;">
-  <h3 id="contact" class="index-section-title">CONTACT</h3>
-  <div class="social-link">
-    <a href="https://www.linkedin.com/in/ychen248" target="_blank"><img src="/assets/image/linkedin_logo_128x.png"></a>
-    <a href="https://www.facebook.com/shawnloatrchen" target="_blank"><img src="/assets/image/facebook_logo_128x.png"></a>
-    <a href="https://www.instagram.com/shawnloatr/" target="_blank"><img src="/assets/image/instagram_128x.png"></a>
-    <a href="https://www.youtube.com/channel/UCQLEPbkEmwz4mABAV-kzQTQ" target="_blank"><img src="/assets/image/youtube_logo_128x.png"></a>
-    <a href="https://github.com/shawnLOATRchen" target="_blank"><img src="/assets/image/github-512.png"></a>
-  </div>
-  <p class="contact-info">ychen248@buffalo.edu</p>
-  <p class="contact-info">Oakland, CA</p>
-  <form class="contactForm" name="htmlform" method="post" action="https://formspree.io/ychen248@buffalo.edu">
+    <!-- inject:templates/contact.html --><section class="alt-section section-contact">
+  <!-- <h3 id="contact" class="index-section-title">CONTACT</h3> -->
+  <md-card class="contact-form">
+    <md-card-header>
+      <!-- <md-card-avatar>
+        <img src="img/logo.svg"/>
+      </md-card-avatar> -->
+      <md-card-header-text>
+        <span class="md-title">Contact</span>
+      </md-card-header-text>
+    </md-card-header>
+
+    <md-card-content>
+      <md-input-container class="md-block form-input" flex-gt-sm>
+        <label>Your name</label>
+        <input ng-model="user.firstName">
+      </md-input-container>
+
+      <md-input-container class="md-block form-input" flex-gt-sm>
+        <label>Email</label>
+        <input ng-model="contact.email" type="email">
+      </md-input-container>
+
+      <md-input-container class="md-block form-input">
+        <label>Your message</label>
+        <textarea ng-model="contact.message" md-maxlength="150" rows="4" md-select-on-focus md-no-autogrow></textarea>
+      </md-input-container>
+    </md-card-content>
+
+    <md-button class="md-primary md-raised" ng-click="showListBottomSheet()">Submit</md-button>
+  </md-card>
+
+  <!-- <form class="contactForm" name="htmlform" method="post" action="https://formspree.io/ychen248@buffalo.edu">
 
     <div class="contact-info-group">
       <label><span>Your Name</span><input type="text" name="name" required="true"></label>
@@ -182,14 +204,23 @@
 
     <label><span>Message</span><textarea name="message"></textarea></label>
     <div class="submit-warp"><input class="submit" type="submit" value="Send"></div>
-  </form>
+  </form> -->
 
 </section>
 <!-- endinject -->
 
     <!-- inject:templates/footer.html --><footer>
   <div class="logo"></div>
-  <p class="copyright">&copy 2017 yuxiang chen all rights reserved.</p>
+  <div class="social-link">
+    <a href="https://www.linkedin.com/in/ychen248" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+    <a href="https://www.facebook.com/shawnloatrchen" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+    <a href="https://www.instagram.com/shawnloatr/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <a href="https://www.youtube.com/channel/UCQLEPbkEmwz4mABAV-kzQTQ" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+    <a href="https://github.com/shawnLOATRchen" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+  </div>
+  <p class="contact-info">ychen248@buffalo.edu</p>
+  <p class="contact-info">Oakland, CA</p>
+  <p class="copyright text-center">&copy; 2017 yuxiang chen all rights reserved.</p>
 </footer>
 <!-- endinject -->
 
