@@ -1,4 +1,4 @@
-angular.module('homepage', [])
+angular.module('homepage', ['ngMaterial'])
 .controller('homeCtrl', ['$scope', 'info', function($scope, info){
 
   $scope.skills = info.skills;
