@@ -1,5 +1,5 @@
 angular.module('homepage', ['ngMaterial'])
-.controller('homeCtrl', ['$scope', 'info', function($scope, info){
+.controller('homeCtrl', ['$scope', '$http', 'info', function($scope, $http, info){
 
   $scope.skills = info.skills;
   $scope.levels = info.levels;
@@ -14,6 +14,13 @@ angular.module('homepage', ['ngMaterial'])
 
   $scope.toggleSideMenu = function(){
     $('body').toggleClass('menu-open');
+  }
+
+  $scope.submitForm = function(){
+    console.log($scope.contact);
+    $http.post('https://formspree.io/ychen248@buffalo.edu', $scope.contact).then(function(res){
+      console.log(res.data)
+    })
   }
 
   setTimeout(function(){

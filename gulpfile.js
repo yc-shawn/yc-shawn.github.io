@@ -82,6 +82,6 @@ gulp.task('script', function(){
 gulp.task('serve', function(){
   gulp.start(['html', 'script', 'sass', 'browser-sync']);
   gulp.watch(['./src/styles/**/*.sass'], ['sass']);
-  // gulp.watch(['./src/**/*.js'], ['script']);
+  gulp.watch(['./src/**/*.js'], ['script']);
   gulp.watch(['./src/**/*.html'], ['html']);
 })
