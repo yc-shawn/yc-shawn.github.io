@@ -7,4 +7,4 @@ Host locally:
 `gulp serve`
 
 
-See the [Demo](yc-shawn.github.io)
+See the [Demo](https://yc-shawn.github.io)
