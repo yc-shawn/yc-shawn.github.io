@@ -1,35 +1,11 @@
 .section-comment
-  position: relative
-
-.control
-  @include position(absolute, 202px, 0, 0, 0)
-  max-width: 1000px
-  margin: auto
-  z-index: 1
-  div
-    width: 25px
-    opacity: 0.4
-  .control-pre, .control-next
-    @include position(absolute, 90px, null, null, null)
-    cursor: pointer
-    // z-index: +1;
-    &:hover
-      opacity: 0.8
-  .control-pre
-    left: 10px
-  .control-next
-    right: 10px
-
-.comment-belt
-  width: 100%
-  position: relative
   .comment-unit
-    display: none
     position: relative
     max-width: 740px
-    margin: 50px auto
-    &.active-people
-      display: flex
+    min-height: 350px
+    margin: 0 auto
+    padding: 50px 0
+    display: flex
     .comment-info
       min-width: 280px
       text-align: center
@@ -54,6 +30,26 @@
         @include eqsize(60px)
         z-index: -1
         opacity: 0.3
+  .carousel-control-prev, .carousel-control-next
+    align-items: flex-start
+    padding-top: 250px
+  .carousel-control-prev-icon
+    background-image: url('/assets/image/control-pre.png')
+    height: 30px
+  .carousel-control-next-icon
+    background-image: url('/assets/image/control-next.png')
+    height: 30px
+
+  @media screen and (max-width: 840px)
+    .comment-unit
+      display: block
+      .comment-info
+        margin-bottom: 20px
+      .comment-content
+        margin: 0px 10%
+        .quote
+          left: -15px
+          top: -30px
 
 .comment-mobile-nav
   text-align: center
@@ -68,22 +64,3 @@
       border-color: darkgrey
     &.active-logo
       border-color: black
-
-@media screen and (max-width: 840px)
-  .control
-    div
-      width: 17.5px
-  .comment-belt
-    .comment-unit
-      position: relative
-      // margin-left: 0px;
-      left: auto
-      &.active-people
-        display: block
-      .comment-info
-        margin-bottom: 20px
-      .comment-content
-        margin: 0px 10%
-        .quote
-          left: -15px
-          top: -30px

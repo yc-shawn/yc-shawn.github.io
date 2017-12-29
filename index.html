@@ -11,6 +11,7 @@
     <title>Yuxiang Chen's personal website</title>
 
     <!-- style sheet -->
+    <link rel="stylesheet" href="/assets/libs/bootstrap.4.0.0.beta.3.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/libs/angular-material.1.6.5.min.css">
 
@@ -110,56 +111,62 @@
 </section>
 <!-- endinject -->
     <!-- inject:templates/comment.html --><section class="section-comment">
-  <h3 id="comment" class="index-section-title">COMMENT</h3>
-
-  <div class="comment-mobile-nav">
-    <!-- <span></span> <span></span> <span></span> <span></span> -->
-  </div>
-
-  <div class="control">
-    <div class="control-pre"><img src="/assets/image/control-pre.png" alt="control-pre"></div>
-    <div class="control-next"><img src="/assets/image/control-next.png" alt="control-next"></div>
-  </div>
-
-  <div class="comment-belt">
-    <!-- Comment 1 -->
-    <div class="comment-unit">
-      <div class="comment-info">
-        <img src="/assets/image/peter_avatar.jpg" alt="avatar">
-        <strong class="comment-name">Peter Fioretti</strong>
-        <div class="comment-title">Founder, Synchronyze Inc.</div>
+  <div id="comment-carousel" class="carousel slide" data-ride="carousel">
+    <h3 id="comment" class="index-section-title">COMMENT</h3>
+    <ol class="carousel-indicators">
+      <li data-target="#comment-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#comment-carousel" data-slide-to="1"></li>
+      <li data-target="#comment-carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="comment-unit">
+          <div class="comment-info">
+            <img src="/assets/image/peter_avatar.jpg" alt="avatar">
+            <strong class="comment-name">Peter Fioretti</strong>
+            <div class="comment-title">Founder, Synchronyze Inc.</div>
+          </div>
+          <div class="comment-content">
+            <div class="quote"></div>
+            <p>I met Shawn in my first trip to Silicon Valley. He immediatly impressed me for his hard work and dedication. When he talks you can hear passion flowing through your ears, not just words.</p>
+          </div>
+        </div>
       </div>
-      <div class="comment-content">
-        <div class="quote"></div>
-        <p>I met Shawn in my first trip to Silicon Valley. He immediatly impressed me for his hard work and dedication. When he talks you can hear passion flowing through your ears, not just words.</p>
+      <div class="carousel-item">
+        <div class="comment-unit">
+          <div class="comment-info">
+            <img src="/assets/image/geok_avatar.jpg" alt="avatar">
+            <strong class="comment-name">Geok Hui Koh</strong>
+            <div class="comment-title">Founder, Lilitofu</div>
+          </div>
+          <div class="comment-content">
+            <div class="quote"></div>
+            <p>Shawn is a strong team player and often going above and beyond to help his peers even if the issues are outside his immediate scope of responsibilities. He’s led team on-boarding session for new interns, curated good learning resources to share, and is quick to step up and guide other teams through roadblocks.</p>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <!-- Comment 2 -->
-    <div class="comment-unit">
-      <div class="comment-info">
-        <img src="/assets/image/geok_avatar.jpg" alt="avatar">
-        <strong class="comment-name">Geok Hui Koh</strong>
-        <div class="comment-title">Founder, Lilitofu</div>
-      </div>
-      <div class="comment-content">
-        <div class="quote"></div>
-        <p>Shawn is a strong team player and often going above and beyond to help his peers even if the issues are outside his immediate scope of responsibilities. He’s led team on-boarding session for new interns, curated good learning resources to share, and is quick to step up and guide other teams through roadblocks.</p>
-      </div>
-    </div>
-
-    <!-- Comment 3 -->
-    <div class="comment-unit">
-      <div class="comment-info">
-        <img src="/assets/image/yiminghu_avatar.jpg" alt="avatar">
-        <strong class="comment-name">Yiming Hu</strong>
-        <div class="comment-title">Product Manager, Laiye Inc.</div>
-      </div>
-      <div class="comment-content">
-        <div class="quote"></div>
-        <p>Shawn is one of the few people that I've ever met with strong self-learning ability and solid programming technics. I believe he could create greater value to his organization.</p>
+      <div class="carousel-item">
+        <div class="comment-unit">
+          <div class="comment-info">
+            <img src="/assets/image/yiminghu_avatar.jpg" alt="avatar">
+            <strong class="comment-name">Yiming Hu</strong>
+            <div class="comment-title">Product Manager, Laiye Inc.</div>
+          </div>
+          <div class="comment-content">
+            <div class="quote"></div>
+            <p>Shawn is one of the few people that I've ever met with strong self-learning ability and solid programming technics. I believe he could create greater value to his organization.</p>
+          </div>
+        </div>
       </div>
     </div>
+    <a class="carousel-control-prev" href="#comment-carousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#comment-carousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 </section>
 <!-- endinject -->
@@ -226,6 +233,8 @@
 
     <!-- Scripts -->
     <script src="/assets/libs/jquery.3.1.1.min.js"></script>
+    <script src="/assets/libs/popper.1.12.9.min.js"></script>
+    <script src="/assets/libs/bootstrap.4.0.0.beta.3.min.js"></script>
     <script src="/assets/libs/scrollreveal.3.3.6.min.js"></script>
     <script src="/dist/app.js"></script>
   </body>
