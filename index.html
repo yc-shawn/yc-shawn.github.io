@@ -100,10 +100,10 @@
         <div class="work-return"></div>
         <h4 class="project-title">{{ projects[curProjIndex].title }}</h4>
         <div class="project-load">
-          <div ng-include="'/src/templates/work/youtube-channel.html'" ng-show="curProjIndex === 5"></div>
-          <div ng-include="'/src/templates/work/HILS-lab.html'" ng-show="curProjIndex === 6"></div>
-          <div ng-include="'/src/templates/work/local-life-ios.html'" ng-show="curProjIndex === 7"></div>
-          <div ng-include="'/src/templates/work/signature-sign-in-system.html'" ng-show="curProjIndex === 8"></div>
+          <div ng-include="'/src/templates/work/youtube-channel.html'" ng-show="curProjIndex === 6"></div>
+          <div ng-include="'/src/templates/work/HILS-lab.html'" ng-show="curProjIndex === 7"></div>
+          <div ng-include="'/src/templates/work/local-life-ios.html'" ng-show="curProjIndex === 8"></div>
+          <div ng-include="'/src/templates/work/signature-sign-in-system.html'" ng-show="curProjIndex === 9"></div>
         </div>
       </div>
     </div>
@@ -137,7 +137,7 @@
           <div class="comment-info">
             <img src="/assets/image/geok_avatar.jpg" alt="avatar">
             <strong class="comment-name">Geok Hui Koh</strong>
-            <div class="comment-title">Founder, Lilitofu</div>
+            <div class="comment-title">CEO, Lilitofu</div>
           </div>
           <div class="comment-content">
             <div class="quote"></div>
@@ -150,7 +150,7 @@
           <div class="comment-info">
             <img src="/assets/image/yiminghu_avatar.jpg" alt="avatar">
             <strong class="comment-name">Yiming Hu</strong>
-            <div class="comment-title">Product Manager, Laiye Inc.</div>
+            <div class="comment-title">Product Manager, Meituan.</div>
           </div>
           <div class="comment-content">
             <div class="quote"></div>
@@ -170,8 +170,7 @@
   </div>
 </section>
 <!-- endinject -->
-    <!-- inject:templates/contact.html --><section class="alt-section section-contact">
-  <h3 id="contact" class="index-section-title contact-title" >CONTACT</h3>
+    <!-- inject:templates/contact.html --><section id="contact" class="alt-section section-contact">
   <md-card class="contact-form">
     <md-card-header>
       <!-- <md-card-avatar>
@@ -201,18 +200,6 @@
 
     <md-button class="md-primary md-raised" ng-click="submitForm()">Submit</md-button>
   </md-card>
-
-  <!-- <form class="contactForm" name="htmlform" method="post" action="https://formspree.io/ychen248@buffalo.edu">
-
-    <div class="contact-info-group">
-      <label><span>Your Name</span><input type="text" name="name" required="true"></label>
-      <label><span>Your Email</span><input type="email" name="_replyto" required="true"></label>
-    </div>
-
-    <label><span>Message</span><textarea name="message"></textarea></label>
-    <div class="submit-warp"><input class="submit" type="submit" value="Send"></div>
-  </form> -->
-
 </section>
 <!-- endinject -->
 

@@ -9,6 +9,7 @@ angular.module('homepage', ['ngMaterial'])
   $scope.curProjIndex = 0;
 
   $scope.chooseProj = function(index){
+    console.log(index)
     $scope.curProjIndex = index;
   }
 
@@ -24,14 +25,16 @@ angular.module('homepage', ['ngMaterial'])
   }
 
   setTimeout(function(){
-    smoothScroll(300);
-    backToTop(333);
-    workBelt();
-    fitTextInit();
-    commentStuff();
-    scrollAnimate();
-    // $('.thumb-container a').attr('href', '#work');
-    $("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
+    $(function(){
+      smoothScroll(300);
+      backToTop(333);
+      workBelt();
+      fitTextInit();
+      commentStuff();
+      scrollAnimate();
+      // $('.thumb-container a').attr('href', '#work');
+      $("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
+    })
   }, 100)
 
   function backToTop(duration){
@@ -86,8 +89,6 @@ angular.module('homepage', ['ngMaterial'])
       // $('.project-load div').css('display','none');
     });
   }
-
-
 
   function commentStuff(){
     $('.comment-unit').first().addClass('active-people');
@@ -229,6 +230,14 @@ angular.module('homepage')
 
   var projects = [
     {
+      img: 'plateiq-img',
+      title: 'Plate IQ',
+      url: 'https://www.plateiq.com'
+    }, {
+      img: 'lilitofu-img',
+      title: 'Lilitofu',
+      url: 'https://www.lilitofu.com'
+    }, {
       img: 'chat-img',
       title: 'Real-time Chat Application',
       url: '/chatapp'
@@ -244,10 +253,6 @@ angular.module('homepage')
       img: 'craigslist-img',
       title: 'Craigslist',
       url: '/craigslist-home'
-    }, {
-      img: 'todo-img',
-      title: 'Todo List Web Application',
-      url: '/todolist'
     }, {
       img: 'ros-img',
       title: 'Youtube Channel',

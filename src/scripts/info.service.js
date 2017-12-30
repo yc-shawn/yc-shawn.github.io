@@ -37,6 +37,14 @@ angular.module('homepage')
 
   var projects = [
     {
+      img: 'plateiq-img',
+      title: 'Plate IQ',
+      url: 'https://www.plateiq.com'
+    }, {
+      img: 'lilitofu-img',
+      title: 'Lilitofu',
+      url: 'https://www.lilitofu.com'
+    }, {
       img: 'chat-img',
       title: 'Real-time Chat Application',
       url: '/chatapp'
@@ -52,10 +60,6 @@ angular.module('homepage')
       img: 'craigslist-img',
       title: 'Craigslist',
       url: '/craigslist-home'
-    }, {
-      img: 'todo-img',
-      title: 'Todo List Web Application',
-      url: '/todolist'
     }, {
       img: 'ros-img',
       title: 'Youtube Channel',
