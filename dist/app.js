@@ -24,18 +24,16 @@ angular.module('homepage', ['ngMaterial'])
     })
   }
 
-  setTimeout(function(){
-    $(function(){
-      smoothScroll(300);
-      backToTop(333);
-      workBelt();
-      fitTextInit();
-      commentStuff();
-      scrollAnimate();
-      // $('.thumb-container a').attr('href', '#work');
-      $("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
-    })
-  }, 100)
+  $(function(){
+    smoothScroll(300);
+    backToTop(333);
+    workBelt();
+    fitTextInit();
+    commentStuff();
+    scrollAnimate();
+    // $('.thumb-container a').attr('href', '#work');
+    $("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
+  })
 
   function backToTop(duration){
     var btt = $('.back-to-top');
@@ -232,11 +230,11 @@ angular.module('homepage')
     {
       img: 'plateiq-img',
       title: 'Plate IQ',
-      url: 'https://www.plateiq.com'
+      url: '#work'
     }, {
       img: 'lilitofu-img',
       title: 'Lilitofu',
-      url: 'https://www.lilitofu.com'
+      url: '#work'
     }, {
       img: 'chat-img',
       title: 'Real-time Chat Application',

@@ -39,11 +39,11 @@ angular.module('homepage')
     {
       img: 'plateiq-img',
       title: 'Plate IQ',
-      url: 'https://www.plateiq.com'
+      url: '#work'
     }, {
       img: 'lilitofu-img',
       title: 'Lilitofu',
-      url: 'https://www.lilitofu.com'
+      url: '#work'
     }, {
       img: 'chat-img',
       title: 'Real-time Chat Application',

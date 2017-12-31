@@ -20,6 +20,8 @@
         <div class="work-return"></div>
         <h4 class="project-title">{{ projects[curProjIndex].title }}</h4>
         <div class="project-load">
+          <div ng-include="'/src/templates/work/plateiq.html'" ng-show="curProjIndex === 0"></div>
+          <div ng-include="'/src/templates/work/lilitofu.html'" ng-show="curProjIndex === 1"></div>
           <div ng-include="'/src/templates/work/youtube-channel.html'" ng-show="curProjIndex === 6"></div>
           <div ng-include="'/src/templates/work/HILS-lab.html'" ng-show="curProjIndex === 7"></div>
           <div ng-include="'/src/templates/work/local-life-ios.html'" ng-show="curProjIndex === 8"></div>

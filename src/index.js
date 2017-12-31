@@ -24,18 +24,16 @@ angular.module('homepage', ['ngMaterial'])
     })
   }
 
-  setTimeout(function(){
-    $(function(){
-      smoothScroll(300);
-      backToTop(333);
-      workBelt();
-      fitTextInit();
-      commentStuff();
-      scrollAnimate();
-      // $('.thumb-container a').attr('href', '#work');
-      $("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
-    })
-  }, 100)
+  $(function(){
+    smoothScroll(300);
+    backToTop(333);
+    workBelt();
+    fitTextInit();
+    commentStuff();
+    scrollAnimate();
+    // $('.thumb-container a').attr('href', '#work');
+    $("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
+  })
 
   function backToTop(duration){
     var btt = $('.back-to-top');
