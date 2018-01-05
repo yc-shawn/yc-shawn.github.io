@@ -1,14 +1,21 @@
 .section-comment
+  .carousel-indicators
+    li
+      background-color: #F2F1EF
+      &.active
+        background-color: darkgrey
   .comment-unit
     position: relative
     max-width: 740px
-    min-height: 350px
+    min-height: 550px
     margin: 0 auto
     padding: 50px 0
     display: flex
+    flex-direction: column
     .comment-info
       min-width: 280px
       text-align: center
+      margin-bottom: 20px
       img
         max-width: 128px
         border-radius: 50%
@@ -43,8 +50,6 @@
   @media screen and (max-width: 840px)
     .comment-unit
       display: block
-      .comment-info
-        margin-bottom: 20px
       .comment-content
         margin: 0px 10%
         .quote
