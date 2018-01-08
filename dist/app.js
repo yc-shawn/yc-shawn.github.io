@@ -238,19 +238,19 @@ angular.module('homepage')
     }, {
       img: 'chat-img',
       title: 'Real-time Chat Application',
-      url: '/chatapp'
+      url: 'https://yc-shawn.herokuapp.com/chatapp'
     }, {
       img: 'shoppingcart-img',
       title: 'E-commerce Shop App',
-      url: '/shoppingcart'
+      url: 'https://yc-shawn.herokuapp.com/shoppingcart'
     }, {
       img: 'spotifyplaylist-img',
       title: 'Spotify Web Application',
-      url: '/spotify'
+      url: 'https://yc-shawn.herokuapp.com/spotify'
     }, {
       img: 'craigslist-img',
       title: 'Craigslist',
-      url: '/craigslist-home'
+      url: 'https://yc-shawn.herokuapp.com/craigslist-home'
     }, {
       img: 'ros-img',
       title: 'Youtube Channel',
