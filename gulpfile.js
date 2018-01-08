@@ -17,6 +17,7 @@ var htmlmin = require('gulp-htmlmin');
 gulp.task('browser-sync', function(){
   browserSync.init(null, {
     open: false,
+    port: 2000,
     server: { baseDir: './' }
   });
 })

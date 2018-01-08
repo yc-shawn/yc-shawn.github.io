@@ -8,24 +8,30 @@
     @include eqsize(225px)
     border-radius: 50%
     order: 3
-  .icon1
-    @include background('code.png', null, center, center, no-repeat)
-    order: 1
-  .icon2
-    @include background('cogs.png', null, center, center, no-repeat)
-    order: 2
-  .icon3
-    @include background('clock.png', null, center, center, no-repeat)
-    order: 4
-  .icon4
-    @include background('pencil.png', null, center, center, no-repeat)
-    order: 5
-  .icon1, .icon2, .icon3, .icon4
+  .icon
     @include eqsize(60px)
     opacity: 0.6
     background-color: lightgrey
     background-repeat: no-repeat
+    color: darkgrey
     border-radius: 50%
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    .fa
+      font-size: 32px
+      color: #222
+  .icon1
+    order: 1
+    .fa
+      font-weight: bolder
+  .icon2
+    order: 2
+  .icon3
+    order: 4
+  .icon4
+    order: 5
+
 .blurb
   max-width: 620px
   padding: 0 15px
