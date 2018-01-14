@@ -47,7 +47,7 @@ angular.module('homepage')
     }, {
       img: 'chat-img',
       title: 'Real-time Chat Application',
-      url: 'https://yc-shawn.herokuapp.com/chatapp'
+      url: 'https://yc-shawn.github.io/real-time-chat/'
     }, {
       img: 'shoppingcart-img',
       title: 'E-commerce Shop App',
