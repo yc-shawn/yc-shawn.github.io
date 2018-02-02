@@ -49,6 +49,10 @@ angular.module('homepage')
       title: 'Real-time Chat Application',
       url: 'https://yc-shawn.github.io/real-time-chat/'
     }, {
+      img: 'craigslist-img',
+      title: 'Craigslist',
+      url: 'https://yc-shawn.github.io/craigslist-housing'
+    }, {
       img: 'shoppingcart-img',
       title: 'E-commerce Shop App',
       url: 'https://yc-shawn.herokuapp.com/shoppingcart'
@@ -56,10 +60,6 @@ angular.module('homepage')
       img: 'spotifyplaylist-img',
       title: 'Spotify Web Application',
       url: 'https://yc-shawn.herokuapp.com/spotify'
-    }, {
-      img: 'craigslist-img',
-      title: 'Craigslist',
-      url: 'https://yc-shawn.herokuapp.com/craigslist-home'
     }, {
       img: 'ros-img',
       title: 'Youtube Channel',
