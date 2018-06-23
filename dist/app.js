@@ -250,7 +250,7 @@ angular.module('homepage')
     }, {
       img: 'spotifyplaylist-img',
       title: 'Spotify Web Application',
-      url: 'https://yc-shawn.herokuapp.com/spotify'
+      url: 'https://yc-shawn.github.io/spotify'
     }, {
       img: 'ros-img',
       title: 'Youtube Channel',
