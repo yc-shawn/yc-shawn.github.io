@@ -3,16 +3,16 @@ angular.module('homepage')
 
   var skills = [
     'Java',
-    'Javascript/ES6',
+    'Javascript',
+    'Typescript',
     'NodeJS',
     'React/Redux',
     'AngularJS',
+    'Angular',
     'Bootstrap',
     'Jquery',
-    'Python',
-    'Swift',
-    'AWS',
     'CSS/SASS/SCSS',
+    'AWS',
     'MongoDB'
   ];
 
@@ -24,12 +24,14 @@ angular.module('homepage')
     'C++': 3,
     'HTML': 5,
     'CSS/SASS/SCSS': 5,
-    'Javascript/Es6': 4,
+    'Javascript': 5,
+    'Typescript': 4,
     'Jquery': 4,
     'NodeJS': 4,
     'React/Redux': 4,
     'SQL/NoSQL': 3,
     'AngularJS': 4,
+    'Angular': 4,
     'Bootstrap': 4,
     'AWS': 3,
     'MongoDB': 3
