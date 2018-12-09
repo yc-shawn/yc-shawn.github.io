@@ -58,7 +58,12 @@
 
   <div class="blurb">
     <p>Hi, I'm <b>Yuxiang Chen</b>, people also call me <b>Shawn</b>,
-      I'm a <b>Software Engineer(Front-end) at <a href="https://www.plateiq.com" target="_blank">Plate IQ</a></b>
+      I'm a 
+      <b>Software Engineer(Front-end) at 
+        <a href="https://www.linkedin.com" target="_blank">
+          Linked<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </a>
+      </b>
     </p>
     <p>I'm strong in design and integration problem-solving. Expert in <strong>Java, Javascript/Typescript, NodeJS, ReactJS, AngularJS/Angular</strong>.
   	Skilled in <strong>Front-end Developing</strong>.
@@ -70,7 +75,7 @@
     <div class="skill-unit" ng-repeat="skill in skills">
       <div class="skill-label">{{ skill }}</div>
       <div class="{{'skill-icon skill-' + levels[skill] }}">
-       <span ng-repeat="n in [1,2,3,4,5]"></span>
+        <span ng-repeat="n in [1,2,3,4,5]"></span>
       </div>
     </div>
   </div>
@@ -245,6 +250,16 @@
   <p class="copyright text-center">&copy; 2018 yuxiang chen all rights reserved.</p>
 </footer>
 <!-- endinject -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129426367-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-129426367-1');
+    </script>
 
     <!-- Scripts -->
     <script src="/assets/libs/jquery.3.1.1.min.js"></script>
