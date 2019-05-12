@@ -6,6 +6,10 @@ Host locally:
 
 `gulp serve`
 
+Deploy:
+
+`gulp build`
+
 
 See the [Demo](https://yc-shawn.github.io)
 
