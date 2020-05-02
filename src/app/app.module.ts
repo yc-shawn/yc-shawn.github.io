@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeModule } from './home/home.module';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+@Component({
+  selector: 'yc-root',
+  template: `<router-outlet></router-outlet>`
+})
+export class RootComponent {} 
+
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [RootComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot([]),
+    HomeModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [RootComponent]
 })
 export class AppModule { }
