@@ -3,10 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HomeHeaderComponent } from './home-header/home-header.component';
+import { HomeAboutmeComponent } from './home-aboutme/home-aboutme.component';
+import { HomePortfolioComponent } from './home-portfolio/home-portfolio.component';
+import { HomeCommentsComponent } from './home-comments/home-comments.component';
+import { HomeFooterComponent } from './home-footer/home-footer.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, HomeHeaderComponent],
+  declarations: [HomeComponent, HomeHeaderComponent, HomeAboutmeComponent, HomePortfolioComponent, HomeCommentsComponent, HomeFooterComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([{ path: '', component: HomeComponent }])
