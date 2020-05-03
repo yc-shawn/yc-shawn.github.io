@@ -30,6 +30,7 @@
       letter-spacing: 0.05em;
       color: white;
       line-height: 1;
+      white-space: nowrap;
     }
   }
 
@@ -44,19 +45,17 @@
     background-repeat: no-repeat;
   }
 
-  .yc-header__nav {
-    float: right;
-    padding: 30px 30px 0 0;
-    a {
-      display: inline-block;
-      margin-left: 20px;
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 700;
-      font-size: 14px;
-      &:hover {
-        color: rgba(255, 255, 255, 0.65)''
+  @media screen and (max-width: 650px) {
+    .yc-header__intro {
+      .yc-header__intro-name {
+        font-size: 32px;
+        border-width: 5px;
+      }
+      .yc-header__intro-title {
+        font-weight: 500;
+        font-size: 13px;
       }
     }
-        
   }
 }
+

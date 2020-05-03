@@ -7,10 +7,11 @@ import { HomeAboutmeComponent } from './home-aboutme/home-aboutme.component';
 import { HomePortfolioComponent } from './home-portfolio/home-portfolio.component';
 import { HomeCommentsComponent } from './home-comments/home-comments.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
+import { HomeNavComponent } from './home-nav/home-nav.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, HomeHeaderComponent, HomeAboutmeComponent, HomePortfolioComponent, HomeCommentsComponent, HomeFooterComponent],
+  declarations: [HomeComponent, HomeHeaderComponent, HomeAboutmeComponent, HomePortfolioComponent, HomeCommentsComponent, HomeFooterComponent, HomeNavComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([{ path: '', component: HomeComponent }])

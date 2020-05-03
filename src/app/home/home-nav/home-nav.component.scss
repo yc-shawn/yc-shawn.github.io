@@ -1,0 +1,36 @@
+:host {
+  position: absolute;
+  display: flex;
+  top: 30px;
+  right: 30px;
+  z-index: 1;
+  > a {
+    display: inline-block;
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+    font-size: 14px;
+    &:hover {
+      color: rgba(255, 255, 255, 0.65)''
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    position: fixed;
+    height: 100vh;
+    flex-direction: column;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    background: #333;
+    padding : 30px 0;
+    transition: right 0.3s ease-in-out;
+    > a {
+      padding: 10px 8px;
+    }
+
+    &.yc-home-nav--menu-open {
+      right: 0;
+    }
+  }
+}
