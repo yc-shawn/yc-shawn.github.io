@@ -1,0 +1,33 @@
+:host {
+  display: block;
+  padding: 40px 0 20px 0;
+  background-color: #26262a;
+  color: white;
+  .yc-footer__social {
+    max-width: 400px;
+    margin: 0px auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    a {
+      display: block;
+      text-align: center;
+      line-height: 50px;
+      height: 45px;
+      &:hover {
+        transform: scale(1.25)
+      }
+      .fab {
+        font-size: 35px;
+        color: white;
+      }
+    }
+  }
+  .yc-footer__contact {
+    text-align: center;
+    margin: 20px;
+  }
+  .yc-footer__copyright {
+    text-align: center;
+  }
+}
