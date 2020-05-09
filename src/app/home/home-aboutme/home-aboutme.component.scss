@@ -1,0 +1,73 @@
+:host {
+  .yc-aboutme__aboutme-image {
+    max-width: 780px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 225px;
+      height: 225px;
+      border-radius: 50%;
+      order: 3;
+    }
+    .yc-aboutme__aboutme-icon {
+      width: 60px;
+      height: 60px;
+      opacity: 0.6;
+      background-color: lightgrey;
+      color: darkgrey;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      .fas, .far {
+        font-size: 24px;
+        color: #222;
+      }
+      &:nth-of-type(1) {
+        order: 1;
+      }
+      &:nth-of-type(2) {
+        order: 2;
+      }
+      &:nth-of-type(3) {
+        order: 4;
+      }
+      &:nth-of-type(4) {
+        order: 5;
+      }
+    }
+    @media screen and (max-width: 650px) {
+      display: block;
+      text-align: center;
+      img {
+        display: block;
+        margin: 0 auto 30px auto;
+      }
+      .yc-aboutme__aboutme-icon {
+        margin: 5px;
+      }
+    }
+  }
+  .yc-aboutme__aboutme-intro {
+    max-width: 620px;
+    padding: 0 15px;
+    margin: 50px auto;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+    a {
+      color: black;
+      > .fa-linkedin {
+        color: #0074d9;
+        font-size: 22px;
+        margin-left: 2px;
+        text-decoration: inherit;
+        text-decoration-color: black;
+      }
+    }
+  }
+
+
+}
