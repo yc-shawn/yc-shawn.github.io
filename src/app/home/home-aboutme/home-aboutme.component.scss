@@ -1,5 +1,5 @@
 :host {
-  .yc-aboutme__aboutme-image {
+  .yc-aboutme__image {
     max-width: 780px;
     display: flex;
     margin: 0 auto;
@@ -11,7 +11,7 @@
       border-radius: 50%;
       order: 3;
     }
-    .yc-aboutme__aboutme-icon {
+    .yc-aboutme__icon {
       width: 60px;
       height: 60px;
       opacity: 0.6;
@@ -45,12 +45,12 @@
         display: block;
         margin: 0 auto 30px auto;
       }
-      .yc-aboutme__aboutme-icon {
+      .yc-aboutme__icon {
         margin: 5px;
       }
     }
   }
-  .yc-aboutme__aboutme-intro {
+  .yc-aboutme__intro {
     max-width: 620px;
     padding: 0 15px;
     margin: 50px auto;
@@ -68,6 +68,47 @@
       }
     }
   }
-
-
+  .yc-aboutme__skills {
+    max-width: 740px;
+    margin: 100px auto;
+    color: #999;
+    overflow: auto;
+    .yc-aboutme__skill {
+      width: 23%;
+      padding-left: 10%;
+      float: left;
+      @for $i from 1 through 5 {
+        .yc-aboutme__skill-icon-#{$i} span:nth-child(n+#{$i+1}) {
+          background-color: lightgrey;
+        }  
+      }
+      .yc-aboutme__skill-icon {
+        margin: 2px 0 30px;
+        span {
+          width: 14px;
+          height: 14px;
+          display: inline-block;
+          background-color: black;
+          margin-right: 5px;
+          border-radius: 50%;
+          &:after {
+            width: 10px;
+            height: 10px;
+            content: '';
+            display: block;
+            background: #fff;
+            border-radius: 50%;
+            margin: 2px;
+          }
+        }
+      }   
+    }
+    @media screen and (max-width: 541px) {
+      margin-left: 25px;
+      .yc-aboutme__skill {
+        width: 45%;
+        padding-left: 5%;
+      }
+    }
+  }
 }

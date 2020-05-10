@@ -1,16 +1,16 @@
 <h3 id="about_me" class="yc-section-title">ABOUT ME</h3>
 
 <!-- Profile image -->
-<div class="yc-aboutme__aboutme-image">
+<section class="yc-aboutme__image">
   <img src="/assets/images/my-portrait.jpg" class="face-img" alt="">
-  <span class="yc-aboutme__aboutme-icon"><i class="fas fa-code" aria-hidden="true"></i></span>
-  <span class="yc-aboutme__aboutme-icon"><i class="fas fa-camera-retro" aria-hidden="true"></i></span>
-  <span class="yc-aboutme__aboutme-icon"><i class="far fa-clock" aria-hidden="true"></i></span>
-  <span class="yc-aboutme__aboutme-icon"><i class="fas fa-pencil-ruler" aria-hidden="true"></i></span>
-</div>
+  <span class="yc-aboutme__icon"><i class="fas fa-code" aria-hidden="true"></i></span>
+  <span class="yc-aboutme__icon"><i class="fas fa-camera-retro" aria-hidden="true"></i></span>
+  <span class="yc-aboutme__icon"><i class="far fa-clock" aria-hidden="true"></i></span>
+  <span class="yc-aboutme__icon"><i class="fas fa-pencil-ruler" aria-hidden="true"></i></span>
+</section>
 
 <!-- Introduction -->
-<div class="yc-aboutme__aboutme-intro">
+<section class="yc-aboutme__intro">
   <p>Hi, I'm <b>Yuxiang Chen</b>, people also call me <b>Shawn</b>,
     I'm a 
     <b>Software Engineer(Front-end) at 
@@ -22,4 +22,14 @@
   <p>I'm strong in design and integration problem-solving. Expert in <strong>Java, Javascript/Typescript, NodeJS, EmberJS, AngularJS/Angular, ReactJS</strong>.
   Skilled in <strong>Front-end Developing</strong>.
   Highly adaptable in quickly changing technical environments with very strong organizational and analytical skills.</p>
-</div>
+</section>
+
+<!-- Skills -->
+<section class="yc-aboutme__skills">
+  <div class="yc-aboutme__skill" *ngFor="let skill of skills">
+    <div>{{ skill }}</div>
+    <div class="{{'yc-aboutme__skill-icon yc-aboutme__skill-icon-' + levels[skill] }}">
+      <span *ngFor="let n of [1,2,3,4,5]"></span>
+    </div>
+  </div>
+</section>
