@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  background-color: rgba(250,250,250,0.9);
+  padding-bottom: 100px;
+
+  .yc-portfolio__projects {
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    .yc-portfolio__project {
+      display: block;
+      width: 33.33333%;
+      float: left;
+      position: relative;
+      padding-top: 18.7%;
+      overflow: hidden;
+      background-position: center center;
+      background-size: cover;
+      box-shadow: 2px 2px 8px 0px darkgrey;
+      perspective: 300px;
+      cursor: pointer;
+      &.yc-portfolio__project-linkedin {
+
+      }
+      &.yc-portfolio__project-plateiq {
+        background-color: #17364f;
+        background-image: url(/assets/images/projects/plateiq-cover.jpeg)
+      }
+      &.yc-portfolio__project-lilitofu {
+        background-color: #0fb8bd;
+        background-image: url(/assets/images/projects/lilitofu-cover.jpeg)
+      }
+      &.yc-portfolio__project-chatapp {
+        background-color: #8bc174;
+        background-image: url(/assets/images/projects/chatapp-cover.jpg)
+      }
+      &.yc-portfolio__project-craigslist {
+        background-color: #fe88ae;
+        background-image: url(/assets/images/projects/craigslist-cover.png)
+      }
+      &.yc-portfolio__project-shoppingcart {
+        background-color: #e32240;
+        background-image: url(/assets/images/projects/shoppingcart-cover.png)
+      }
+      &.yc-portfolio__project-spotify {
+        background-color: #515151;
+        background-image: url(/assets/images/projects/spotifyplaylist-cover.jpg)
+      }
+      &.yc-portfolio__project-youtube {
+        background-color: #3895c7;
+        background-image: url(/assets/images/projects/youtube-cover.jpeg)
+      }
+      &.yc-portfolio__project-signature {
+        background-color: #15565d;
+        background-image: url(/assets/images/projects/signature-cover.jpeg)
+      }
+    }
+  }
+  
+}
