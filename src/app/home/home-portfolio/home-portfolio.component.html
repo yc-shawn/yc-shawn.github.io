@@ -1,10 +1,9 @@
 <h3 id="portfolio" class="yc-section-title">PORTFOLIO</h3>
 
 <section class="yc-portfolio__projects">
-  <div
+  <a
     *ngFor="let project of projects"
-    class="yc-portfolio__project"
-    [ngClass]="'yc-portfolio__project-' + project.id">
-
-  </div>
+    routerLink="portfolio/{{project.id}}"
+    class="yc-portfolio__project yc-portfolio__project-{{project.id}}">
+  </a>
 </section>
