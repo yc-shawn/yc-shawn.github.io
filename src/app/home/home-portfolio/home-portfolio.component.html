@@ -1,9 +1,18 @@
 <h3 id="portfolio" class="yc-section-title">PORTFOLIO</h3>
 
 <section class="yc-portfolio__projects">
-  <a
-    *ngFor="let project of projects"
-    routerLink="portfolio/{{project.id}}"
-    class="yc-portfolio__project yc-portfolio__project-{{project.id}}">
-  </a>
+  <ng-container *ngFor="let project of projects">
+    <a
+      *ngIf="project.external else internalLink"
+      [href]="project.link"
+      class="yc-portfolio__project yc-portfolio__project-{{project.id}}">
+    </a>
+    <ng-template #internalLink>
+      <a
+        routerLink="portfolio/{{project.id}}"
+        class="yc-portfolio__project yc-portfolio__project-{{project.id}}">
+      </a>
+    </ng-template>
+  </ng-container>
+  
 </section>

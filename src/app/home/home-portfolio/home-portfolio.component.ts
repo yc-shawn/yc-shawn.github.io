@@ -8,31 +8,44 @@ import { Component, OnInit } from '@angular/core';
 export class HomePortfolioComponent implements OnInit {
   projects = [
     {
-      id: 'linkedin'
+      id: 'linkedin',
+      external: false,
     },
     {
-      id: 'plateiq'
+      id: 'plateiq',
+      external: false,
     },
     {
-      id: 'lilitofu'
+      id: 'lilitofu',
+      external: false,
     },
     {
-      id: 'chatapp'
+      id: 'chatapp',
+      external: true,
+      link: 'https://yc-shawn.github.io/real-time-chat/',
     },
     {
-      id: 'craigslist'
+      id: 'craigslist',
+      external: true,
+      link: 'https://yc-shawn.github.io/craigslist-housing',
     },
     {
-      id: 'shoppingcart'
+      id: 'shoppingcart',
+      external: true,
+      link: 'https://yc-shawn.herokuapp.com/shoppingcart',
     },
     {
-      id: 'spotify'
+      id: 'spotify',
+      external: true,
+      link: 'https://yc-shawn.github.io/spotify',
     },
     {
-      id: 'youtube'
+      id: 'youtube',
+      external: false,
     },
     {
-      id: 'signature'
+      id: 'signature',
+      external: false,
     },
   ];
 
