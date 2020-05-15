@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'yc-portfolio',
@@ -51,11 +51,18 @@ export class PortfolioComponent implements OnInit {
   ];
   portfolioId:string;
 
-  constructor(private _activatedRoute: ActivatedRoute) {
+  constructor(
+    private _activatedRoute: ActivatedRoute,
+    private _router: Router,
+  ) {
     this.portfolioId = this._activatedRoute.snapshot.params.portfolioId;
   }
 
   ngOnInit(): void {
+  }
+
+  onBack() {
+    this._router.navigateByUrl('/');
   }
 
 }

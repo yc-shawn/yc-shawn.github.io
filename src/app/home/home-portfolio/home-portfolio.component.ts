@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'yc-home-portfolio',
@@ -50,7 +50,14 @@ export class HomePortfolioComponent implements OnInit {
     },
   ];
 
-  constructor(private _router: Router) { }
+  constructor(private _router: Router) {
+    this._router.events
+      .subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          console.log(event)
+        }
+      })
+  }
 
   ngOnInit(): void {
   }
@@ -58,9 +65,9 @@ export class HomePortfolioComponent implements OnInit {
   onProject(project) {
     $('html, body').animate({
       scrollTop: $(`#portfolio`).offset().top
-   }, 300, () => {
-    this._router.navigateByUrl(`portfolio/${project.id}`)
-   });
+    }, 300, () => {
+      this._router.navigateByUrl(`portfolio/${project.id}`)
+    });
   }
 
 }
