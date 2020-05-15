@@ -9,10 +9,9 @@
     </a>
     <ng-template #internalLink>
       <a
-        routerLink="portfolio/{{project.id}}"
+        (click)="onProject(project)"
         class="yc-portfolio__project yc-portfolio__project-{{project.id}}">
       </a>
     </ng-template>
   </ng-container>
-  
 </section>

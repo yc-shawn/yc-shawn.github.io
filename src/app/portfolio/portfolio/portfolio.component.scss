@@ -1,0 +1,159 @@
+:host {
+  display: block;
+  background-color: #f5f5f5;
+  padding-bottom: 100px;
+  height: 100vh;
+  overflow-y: scroll;
+
+  .yc-portfolio-container {
+    position: relative;
+  }
+
+  .yc-portfolio__projects {
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    @keyframes slide-left-out {
+      from {
+        left: 50%;
+      }
+      to {
+        left: -100%;
+      }
+    }
+    animation: slide-left-out 0.3s ease-in-out forwards;
+    .yc-portfolio__project {
+      display: block;
+      width: 33.33333%;
+      float: left;
+      position: relative;
+      padding-top: 18.7%;
+      overflow: hidden;
+      background-position: center center;
+      background-size: cover;
+      box-shadow: 2px 2px 8px 0px darkgrey;
+      perspective: 300px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+        z-index: 1;
+      }
+      @for $i from 1 through 9 {
+        $x: center;
+        $y: center;
+        @if $i % 3 == 1 {
+          $x: left;
+        } @else if $i % 3 == 0 {
+          $x: right;
+        }
+        @if $i >= 1 and  $i <= 3 {
+          $y: top;
+        } @else if $i >= 7 and $i <= 9 {
+          $y: bottom;
+        }
+        &:nth-of-type(#{$i}) {
+          transform-origin: $x $y;
+        }
+      }
+      &.yc-portfolio__project-linkedin {
+        background-color: #ffffff;
+        background-image: url(/assets/images/projects/linkedin-cover.png);
+      }
+      &.yc-portfolio__project-plateiq {
+        background-color: #17364f;
+        background-image: url(/assets/images/projects/plateiq-cover.jpeg);
+      }
+      &.yc-portfolio__project-lilitofu {
+        background-color: #0fb8bd;
+        background-image: url(/assets/images/projects/lilitofu-cover.jpeg);
+      }
+      &.yc-portfolio__project-chatapp {
+        background-color: #8bc174;
+        background-image: url(/assets/images/projects/chatapp-cover.jpg);
+      }
+      &.yc-portfolio__project-craigslist {
+        background-color: #fe88ae;
+        background-image: url(/assets/images/projects/craigslist-cover.png);
+      }
+      &.yc-portfolio__project-shoppingcart {
+        background-color: #e32240;
+        background-image: url(/assets/images/projects/shoppingcart-cover.png);
+      }
+      &.yc-portfolio__project-spotify {
+        background-color: #515151;
+        background-image: url(/assets/images/projects/spotifyplaylist-cover.jpg);
+      }
+      &.yc-portfolio__project-youtube {
+        background-color: #3895c7;
+        background-image: url(/assets/images/projects/youtube-cover.jpeg);
+      }
+      &.yc-portfolio__project-signature {
+        background-color: #15565d;
+        background-image: url(/assets/images/projects/signature-cover.jpeg);
+      }
+      @media (max-width:840px) {
+        width: 50%;
+        padding-top: 28.125%;
+        @for $i from 1 through 9 {
+          $x: center;
+          $y: center;
+          @if $i % 2 == 1 {
+            $x: left;
+          } @else if $i % 2 == 0 {
+            $x: right;
+          }
+          @if $i >= 1 and  $i <= 2 {
+            $y: top;
+          }  @else if $i >= 8 and $i <= 9 {
+            $y: bottom;
+          }
+          &:nth-of-type(#{$i}) {
+            transform-origin: $x $y;
+          }
+        }
+      }
+      @media screen and (max-width:540px) {
+        width: 100%;
+        padding-top: 56.25%;
+        @for $i from 1 through 9 {
+          $y: center;
+          @if $i == 1 {
+            $y: top;
+          }
+          @if $i == 9 {
+            $y: bottom;
+          }
+          &:nth-of-type(#{$i}) {
+            transform-origin: center $y;
+          }
+        }
+      }
+    }
+  }
+
+  .yc-portfolio__detail-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: red;
+    @keyframes slide-right-in {
+      from {
+        left: 100%;
+      }
+      to {
+        left: 50%;
+      }
+    }
+    animation: slide-right-in 0.3s ease-in-out forwards;
+  }
+}

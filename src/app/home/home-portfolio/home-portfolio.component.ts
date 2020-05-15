@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'yc-home-portfolio',
@@ -49,9 +50,17 @@ export class HomePortfolioComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onProject(project) {
+    $('html, body').animate({
+      scrollTop: $(`#portfolio`).offset().top
+   }, 300, () => {
+    this._router.navigateByUrl(`portfolio/${project.id}`)
+   });
   }
 
 }

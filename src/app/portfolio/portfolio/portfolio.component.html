@@ -1,3 +1,13 @@
-<ng-container [ngSwitch]="portfolioId">
-  <yc-portfolio-linkedin *ngSwitchCase="'linkedin'"></yc-portfolio-linkedin>
-</ng-container>
+<h3 id="portfolio" class="yc-section-title">PORTFOLIO</h3>
+
+<div class="yc-portfolio-container">
+  <section class="yc-portfolio__projects">
+    <a
+      *ngFor="let project of projects"
+      class="yc-portfolio__project yc-portfolio__project-{{project.id}}">
+    </a>
+  </section>
+  <section class="yc-portfolio__detail-container" [ngSwitch]="portfolioId">
+    <yc-portfolio-linkedin *ngSwitchCase="'linkedin'"></yc-portfolio-linkedin>
+  </section>
+</div>

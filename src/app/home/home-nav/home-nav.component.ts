@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'yc-home-nav',
@@ -15,4 +16,9 @@ export class HomeNavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onScrollTo(tag: string) {
+    $('html, body').animate({
+      scrollTop: $(`#${tag}`).offset().top
+   }, 300);
+  }
 }
