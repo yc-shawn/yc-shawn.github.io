@@ -143,9 +143,8 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 100vw;
+    width: 100%;
     transform: translateX(-50%);
-    background-color: red;
     @keyframes slide-right-in {
       from {
         left: 100%;
@@ -155,5 +154,19 @@
       }
     }
     animation: slide-right-in 0.3s ease-in-out forwards;
+
+    .yc-portfolio__return-container {
+      max-width: 960px;
+      margin: 0 auto;
+      > button {
+        background: white;
+        border: 1px solid #999;
+        color: #999;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+      padding-bottom: 10px;
+    }
   }
 }

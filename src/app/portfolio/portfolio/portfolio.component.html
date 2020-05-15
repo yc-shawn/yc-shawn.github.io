@@ -8,6 +8,9 @@
     </a>
   </section>
   <section class="yc-portfolio__detail-container" [ngSwitch]="portfolioId">
+    <div class="yc-portfolio__return-container">
+      <button><i class="fas fa-chevron-left"></i></button>
+    </div>
     <yc-portfolio-linkedin *ngSwitchCase="'linkedin'"></yc-portfolio-linkedin>
   </section>
 </div>
