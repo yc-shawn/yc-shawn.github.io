@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Component, AfterViewInit } from '@angular/core';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'yc-home-portfolio',
   templateUrl: './home-portfolio.component.html',
   styleUrls: ['./home-portfolio.component.scss']
 })
-export class HomePortfolioComponent implements OnInit {
+export class HomePortfolioComponent implements AfterViewInit {
   projects = [
     {
       id: 'linkedin',
@@ -50,23 +50,31 @@ export class HomePortfolioComponent implements OnInit {
     },
   ];
 
-  constructor(private _router: Router) {
-    this._router.events
-      .subscribe(event => {
-        if (event instanceof NavigationEnd) {
-          console.log(event)
-        }
-      })
-  }
+  constructor(
+    private _router: Router,
+    private _activatedRoute: ActivatedRoute,
+  ) {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    const { tag } = this._activatedRoute.snapshot.queryParams;
+    if (tag === 'portfolio') {
+      this._scrollToPortfolio();
+    }
   }
 
   onProject(project) {
+    this._scrollToPortfolio(300, () => {
+      this._router.navigateByUrl(`portfolio/${project.id}`)
+    })
+  }
+
+  _scrollToPortfolio(duration = 0, callback?: Function) {
     $('html, body').animate({
       scrollTop: $(`#portfolio`).offset().top
-    }, 300, () => {
-      this._router.navigateByUrl(`portfolio/${project.id}`)
+    }, duration, () => {
+      if (callback) {
+        callback();
+      }
     });
   }
 

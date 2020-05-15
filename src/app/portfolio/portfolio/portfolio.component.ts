@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
   projects = [
     {
       id: 'linkedin',
@@ -49,7 +49,10 @@ export class PortfolioComponent implements OnInit {
       external: false,
     },
   ];
+
   portfolioId:string;
+
+  showPortfolioDetails = false;
 
   constructor(
     private _activatedRoute: ActivatedRoute,
@@ -61,8 +64,17 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.showPortfolioDetails = true; 
+    });
+  }
+
   onBack() {
-    this._router.navigateByUrl('/');
+    this.showPortfolioDetails = false;
+    setTimeout(() => {
+      this._router.navigateByUrl('/?tag=portfolio');
+    }, 301);
   }
 
 }

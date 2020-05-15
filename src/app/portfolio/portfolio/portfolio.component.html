@@ -1,6 +1,6 @@
 <h3 id="portfolio" class="yc-section-title">PORTFOLIO</h3>
 
-<div class="yc-portfolio-container">
+<div class="yc-portfolio-container" [class.yc-portfolio-detail-shown]="showPortfolioDetails">
   <section class="yc-portfolio__projects">
     <a
       *ngFor="let project of projects"
@@ -12,5 +12,9 @@
       <button (click)="onBack()"><i class="fas fa-chevron-left"></i></button>
     </div>
     <yc-portfolio-linkedin *ngSwitchCase="'linkedin'"></yc-portfolio-linkedin>
+    <yc-portfolio-plateiq *ngSwitchCase="'plateiq'"></yc-portfolio-plateiq>
+    <yc-portfolio-lilitofu *ngSwitchCase="'lilitofu'"></yc-portfolio-lilitofu>
+    <yc-portfolio-youtube *ngSwitchCase="'youtube'"></yc-portfolio-youtube>
+    <yc-portfolio-signature *ngSwitchCase="'signature'"></yc-portfolio-signature>
   </section>
 </div>

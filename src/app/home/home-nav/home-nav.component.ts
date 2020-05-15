@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'yc-home-nav',
@@ -11,14 +12,25 @@ export class HomeNavComponent implements OnInit {
 
   @Input() @HostBinding('class.yc-home-nav--menu-open') isMenuOpen: boolean;
 
-  constructor() { }
+  constructor(
+    private _router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
 
   onScrollTo(tag: string) {
-    $('html, body').animate({
-      scrollTop: $(`#${tag}`).offset().top
-   }, 300);
+    const tagElement = $(`#${tag}`);
+    if (tagElement) {
+      $('html, body').animate({
+        scrollTop: tagElement.offset().top
+      }, 300, () => {
+        this._router.navigate([], {
+          queryParams: { tag },
+          queryParamsHandling: 'merge',
+          replaceUrl: true,
+        });
+      });
+    }
   }
 }
