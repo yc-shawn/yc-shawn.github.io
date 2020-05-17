@@ -2,4 +2,28 @@
   display: block;
   max-width: 960px;
   margin: 0 auto;
+  padding: 10px 15px 30px 15px;
+
+  .yc-portfolio-lilitofu__demo {
+    position: relative;
+    height: 0;
+    padding: 30%;
+    .lilitofu-img-home, .lilitofu-img-story {
+      position: absolute;
+      width: 70%;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+    .lilitofu-img-home {
+      top: 0;
+      left: 0;
+    }
+    .lilitofu-img-story {
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .yc-portfolio-lilitofu__team {
+    width: 100%;
+  }  
 }
