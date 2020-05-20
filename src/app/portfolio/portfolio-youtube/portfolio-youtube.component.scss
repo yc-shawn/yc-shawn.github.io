@@ -2,4 +2,37 @@
   display: block;
   max-width: 960px;
   margin: 0 auto;
+  padding: 10px 15px 30px 15px;
+
+  .yc-portfolio-youtube__image {
+    width: 60%;
+    margin: 20px 20%;
+  }
+
+  .yc-portfolio-youtube__subscribe {
+    display: block;
+    max-width: 200px;
+    margin: 20px auto;
+    > img {
+      display: block;
+      max-width: 200px;
+      margin: 20px auto;
+    }
+  }
+
+  .yc-portfolio-youtube__ros-playlist {
+    display: block;
+    width: 80%;
+    height: 0;
+    position: relative;
+    margin: 20px auto;
+    padding-bottom: 45%;
+    > iframe {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 }
