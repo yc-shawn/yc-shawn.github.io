@@ -111,4 +111,22 @@
       }
     }
   }
+  .yc-aboutme__resume {
+    max-width: 300px;
+    margin: 0 auto 0 auto;
+    padding: 10px 0 70px 0;
+    text-align: center;
+    > a {
+      font-size: 16px;
+      line-height: 20px;
+      color: black;
+      background-color: white;
+      padding: 0.6em 0.6em;
+      border: black solid 4px;
+      &:hover {
+        color: white;
+        background-color: black;
+      }
+    }
+  }
 }
