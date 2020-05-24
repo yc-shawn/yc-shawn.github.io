@@ -3,6 +3,8 @@
   transition: right 0.3s ease-in-out;
   position: relative;
   right: 0;
+  height: 100vh;
+  overflow-y: scroll;
 
   .yc-home__toggle {
     position: absolute;
@@ -17,6 +19,17 @@
     padding: 0px 10px;
     transition: right 0.3s ease-in-out;
     display: none;
+  }
+
+  .yc-home__scroll-top {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    border: 1px solid #d5d5d5;
+    background-color: #f0f0f0;
   }
 
   @media screen and (max-width: 650px) {

@@ -2,6 +2,10 @@
   <i class="fas fa-bars"></i>
 </button>
 
+<button class="yc-home__scroll-top" *ngIf="showScrollTop" (click)="scrollTop()">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
 <yc-home-nav [isMenuOpen]="isMenuOpen"></yc-home-nav>
 <yc-home-header></yc-home-header>
 <yc-home-aboutme></yc-home-aboutme>
