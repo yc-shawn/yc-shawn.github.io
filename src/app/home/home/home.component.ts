@@ -33,7 +33,6 @@ export class HomeComponent implements OnInit {
   }
 
   scrollTop(): void {
-    console.log('clicked')
     $("yc-home").animate({ scrollTop: 0 }, 300);
   }
 

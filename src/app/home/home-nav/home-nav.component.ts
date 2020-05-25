@@ -22,7 +22,7 @@ export class HomeNavComponent implements OnInit {
   onScrollTo(tag: string) {
     const tagElement = $(`#${tag}`);
     if (tagElement) {
-      $('html, body').animate({
+      $('yc-home').animate({
         scrollTop: tagElement.offset().top
       }, 300, () => {
         this._router.navigate([], {

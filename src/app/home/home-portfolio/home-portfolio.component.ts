@@ -69,8 +69,8 @@ export class HomePortfolioComponent implements AfterViewInit {
   }
 
   _scrollToPortfolio(duration = 0, callback?: Function) {
-    $('html, body').animate({
-      scrollTop: $(`#portfolio`).offset().top
+    $('yc-home').animate({
+      scrollTop: $(`#portfolio`).offset().top + $('yc-home')[0].scrollTop
     }, duration, () => {
       if (callback) {
         callback();
