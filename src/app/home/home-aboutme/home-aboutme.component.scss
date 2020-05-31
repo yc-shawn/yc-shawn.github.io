@@ -129,4 +129,13 @@
       }
     }
   }
+  .yc-aboutme__others {
+    text-align: center;
+    padding: 40px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    > b {
+      color: #e1c184;
+      font-size: 36px;
+    }
+  }
 }
