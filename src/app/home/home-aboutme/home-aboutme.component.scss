@@ -138,4 +138,45 @@
       font-size: 36px;
     }
   }
+  .yc-aboutme__gallery {
+    margin: 0;
+    .col-md-4 {
+      padding: 0;
+      position: relative;
+      &:hover .gallery-text {
+        display: block;
+        background-color: rgba(100, 100, 100, 0.6);
+        span {
+          @keyframes ease-show-up {
+            from {
+              transform: translate(-50%, -0%);
+            }
+            to {
+              transform: translate(-50%, -50%);
+            }
+          }
+          animation: ease-show-up 0.3s 0s ease forwards;
+        }
+      }
+      img {
+        width: 100%;
+      }
+      .gallery-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 28px;
+          color: white;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
