@@ -8,10 +8,11 @@ import { HomePortfolioComponent } from './home-portfolio/home-portfolio.componen
 import { HomeCommentsComponent } from './home-comments/home-comments.component';
 import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { HomeNavComponent } from './home-nav/home-nav.component';
+import { HomeContactComponent } from './home-contact/home-contact.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, HomeHeaderComponent, HomeAboutmeComponent, HomePortfolioComponent, HomeCommentsComponent, HomeFooterComponent, HomeNavComponent],
+  declarations: [HomeComponent, HomeHeaderComponent, HomeAboutmeComponent, HomePortfolioComponent, HomeCommentsComponent, HomeFooterComponent, HomeNavComponent, HomeContactComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([{ path: '', component: HomeComponent }])
