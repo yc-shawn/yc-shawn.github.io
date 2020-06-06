@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  background-image: url('/assets/images/road_sit_right_16_8.jpg');
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 0;
+  padding-top: 50%;
+  position: relative;
+  @media screen and (max-width: 992px) {
+    height: auto;
+    padding: 20px 0;
+  }
+}
+  
+  
