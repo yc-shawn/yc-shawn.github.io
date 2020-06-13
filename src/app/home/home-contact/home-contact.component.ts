@@ -12,4 +12,8 @@ export class HomeContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(): void {
+    console.log('Submit!')
+  }
+
 }

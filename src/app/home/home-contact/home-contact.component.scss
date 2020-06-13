@@ -11,6 +11,34 @@
     height: auto;
     padding: 20px 0;
   }
+
+  .yc-contact__form {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    padding: 15px;
+    margin: 0;
+    .yc-contact__form-content,
+    .yc-contact__form-actions {
+      margin: 0 16px;
+    }
+    .yc-contact__form-field,
+    .yc-contact__form-submit {
+      width: 100%;
+    }
+    @media screen and (max-width: 992px) {
+      position: static;
+      transform: none;
+      width: 45%;
+      margin: 0 20px;
+    }
+    @media screen and (max-width: 768px) {
+      opacity: 0.9;
+      width: auto;
+    }
+  }
 }
   
   
