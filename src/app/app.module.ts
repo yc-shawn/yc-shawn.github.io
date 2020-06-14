@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule }    from '@angular/common/http';
 
 @Component({
   selector: 'yc-root',
@@ -18,6 +18,7 @@ export class RootComponent {}
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       [
         {
