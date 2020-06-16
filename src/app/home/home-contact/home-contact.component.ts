@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -7,6 +7,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home-contact.component.scss']
 })
 export class HomeContactComponent implements OnInit {
+
+  @HostBinding('id') id = 'contact';
 
   contact = {
     name: null,

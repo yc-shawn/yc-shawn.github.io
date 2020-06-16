@@ -25,11 +25,11 @@ export class HomeNavComponent implements OnInit {
       $('yc-home').animate({
         scrollTop: tagElement.offset().top
       }, 300, () => {
-        this._router.navigate([], {
-          queryParams: { tag },
-          queryParamsHandling: 'merge',
-          replaceUrl: true,
-        });
+        // this._router.navigate([], {
+        //   queryParams: { tag },
+        //   queryParamsHandling: 'merge',
+        //   replaceUrl: true,
+        // });
       });
     }
   }

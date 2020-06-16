@@ -58,7 +58,9 @@ export class HomePortfolioComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const { tag } = this._activatedRoute.snapshot.queryParams;
     if (tag === 'portfolio') {
-      this._scrollToPortfolio();
+      setTimeout(() => {
+        this._scrollToPortfolio();
+      });
     }
   }
 
@@ -68,7 +70,7 @@ export class HomePortfolioComponent implements AfterViewInit {
     })
   }
 
-  _scrollToPortfolio(duration = 0, callback?: Function) {
+  private _scrollToPortfolio(duration = 0, callback?: Function) {
     $('yc-home').animate({
       scrollTop: $(`#portfolio`).offset().top + $('yc-home')[0].scrollTop
     }, duration, () => {
