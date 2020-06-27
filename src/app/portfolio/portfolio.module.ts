@@ -8,7 +8,6 @@ import { PortfolioLilitofuComponent } from './portfolio-lilitofu/portfolio-lilit
 import { PortfolioYoutubeComponent } from './portfolio-youtube/portfolio-youtube.component';
 import { PortfolioSignatureComponent } from './portfolio-signature/portfolio-signature.component';
 
-
 @NgModule({
   declarations: [
     PortfolioComponent,
@@ -16,13 +15,13 @@ import { PortfolioSignatureComponent } from './portfolio-signature/portfolio-sig
     PortfolioPlateiqComponent,
     PortfolioLilitofuComponent,
     PortfolioYoutubeComponent,
-    PortfolioSignatureComponent
+    PortfolioSignatureComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild([
       { path: ':portfolioId', component: PortfolioComponent },
     ]),
-  ]
+  ],
 })
-export class PortfolioModule { }
+export class PortfolioModule {}

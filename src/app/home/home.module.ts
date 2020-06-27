@@ -17,7 +17,6 @@ import { HomeFooterComponent } from './home-footer/home-footer.component';
 import { HomeNavComponent } from './home-nav/home-nav.component';
 import { HomeContactComponent } from './home-contact/home-contact.component';
 
-
 const MaterialModules = [
   MatCardModule,
   MatButtonModule,
@@ -27,12 +26,21 @@ const MaterialModules = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, HomeHeaderComponent, HomeAboutmeComponent, HomePortfolioComponent, HomeCommentsComponent, HomeFooterComponent, HomeNavComponent, HomeContactComponent],
+  declarations: [
+    HomeComponent,
+    HomeHeaderComponent,
+    HomeAboutmeComponent,
+    HomePortfolioComponent,
+    HomeCommentsComponent,
+    HomeFooterComponent,
+    HomeNavComponent,
+    HomeContactComponent,
+  ],
   imports: [
     CommonModule,
     FormsModule,
     MaterialModules,
     RouterModule.forChild([{ path: '', component: HomeComponent }]),
-  ]
+  ],
 })
-export class HomeModule { }
+export class HomeModule {}

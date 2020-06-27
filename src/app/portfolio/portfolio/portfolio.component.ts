@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'yc-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrls: ['./portfolio.component.scss'],
 })
 export class PortfolioComponent implements OnInit, AfterViewInit {
   projects = [
@@ -50,23 +50,22 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
     },
   ];
 
-  portfolioId:string;
+  portfolioId: string;
 
   showPortfolioDetails = false;
 
   constructor(
     private _activatedRoute: ActivatedRoute,
-    private _router: Router,
+    private _router: Router
   ) {
     this.portfolioId = this._activatedRoute.snapshot.params.portfolioId;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   ngAfterViewInit() {
     setTimeout(() => {
-      this.showPortfolioDetails = true; 
+      this.showPortfolioDetails = true;
     });
   }
 
@@ -76,5 +75,4 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
       this._router.navigateByUrl('/?tag=portfolio');
     }, 301);
   }
-
 }

@@ -1,13 +1,18 @@
-import { Component, OnInit, HostBinding, HostListener, ElementRef } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  HostBinding,
+  HostListener,
+  ElementRef,
+} from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
   selector: 'yc-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
   @HostBinding('class.yc-home--menu-open') isMenuOpen: boolean = false;
 
   @HostListener('scroll', ['$event'])
@@ -17,11 +22,11 @@ export class HomeComponent implements OnInit {
     } else {
       this.showScrollTop = false;
     }
-  };
+  }
 
   showScrollTop: boolean;
 
-  constructor(private _element: ElementRef) { }
+  constructor(private _element: ElementRef) {}
 
   ngOnInit(): void {}
 
@@ -33,7 +38,6 @@ export class HomeComponent implements OnInit {
   }
 
   scrollTop(): void {
-    $("yc-home").animate({ scrollTop: 0 }, 300);
+    $('yc-home').animate({ scrollTop: 0 }, 300);
   }
-
 }

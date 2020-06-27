@@ -4,7 +4,7 @@ import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'yc-home-portfolio',
   templateUrl: './home-portfolio.component.html',
-  styleUrls: ['./home-portfolio.component.scss']
+  styleUrls: ['./home-portfolio.component.scss'],
 })
 export class HomePortfolioComponent implements AfterViewInit {
   projects = [
@@ -52,7 +52,7 @@ export class HomePortfolioComponent implements AfterViewInit {
 
   constructor(
     private _router: Router,
-    private _activatedRoute: ActivatedRoute,
+    private _activatedRoute: ActivatedRoute
   ) {}
 
   ngAfterViewInit(): void {
@@ -66,18 +66,21 @@ export class HomePortfolioComponent implements AfterViewInit {
 
   onProject(project) {
     this._scrollToPortfolio(300, () => {
-      this._router.navigateByUrl(`portfolio/${project.id}`)
-    })
-  }
-
-  private _scrollToPortfolio(duration = 0, callback?: Function) {
-    $('yc-home').animate({
-      scrollTop: $(`#portfolio`).offset().top + $('yc-home')[0].scrollTop
-    }, duration, () => {
-      if (callback) {
-        callback();
-      }
+      this._router.navigateByUrl(`portfolio/${project.id}`);
     });
   }
 
+  private _scrollToPortfolio(duration = 0, callback?: Function) {
+    $('yc-home').animate(
+      {
+        scrollTop: $(`#portfolio`).offset().top + $('yc-home')[0].scrollTop,
+      },
+      duration,
+      () => {
+        if (callback) {
+          callback();
+        }
+      }
+    );
+  }
 }

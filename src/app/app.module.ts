@@ -4,14 +4,13 @@ import { RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'yc-root',
-  template: `<router-outlet></router-outlet>`
+  template: `<router-outlet></router-outlet>`,
 })
-export class RootComponent {} 
-
+export class RootComponent {}
 
 @NgModule({
   declarations: [RootComponent],
@@ -23,21 +22,25 @@ export class RootComponent {}
       [
         {
           path: '',
-          loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+          loadChildren: () =>
+            import('./home/home.module').then((m) => m.HomeModule),
         },
         {
           path: 'portfolio',
-          loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule),
+          loadChildren: () =>
+            import('./portfolio/portfolio.module').then(
+              (m) => m.PortfolioModule
+            ),
         },
       ],
       {
         useHash: true,
-      },
+      }
     ),
     HomeModule,
     PortfolioModule,
   ],
   providers: [],
-  bootstrap: [RootComponent]
+  bootstrap: [RootComponent],
 })
-export class AppModule { }
+export class AppModule {}
