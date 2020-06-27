@@ -1,4 +1,15 @@
-# yc-shawn.github.io
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yc-shawn/yc-shawn.github.io/dev/src/favicon.ico" width="32"/>
+</p>
+<h1 align="center">
+  yc-shawn.github.io
+  <div align="center">
+    <a href="">
+      <img src="https://img.shields.io/badge/Angular-9.x-dd0331.svg">
+      <img src="https://img.shields.io/badge/%20-VS%20Code-686968.svg?logo=visual-studio-code">
+    </a>
+  </div>
+</h1>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
 
