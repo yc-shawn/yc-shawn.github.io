@@ -4,8 +4,16 @@
 <h1 align="center">
   yc-shawn.github.io
   <div align="center">
-    <a href="">
+    <a href="https://angular.io/docs">
       <img src="https://img.shields.io/badge/Angular-9.x-dd0331.svg">
+    </a>
+    <a href="https://nodejs.org/en/">
+      <img src="https://img.shields.io/badge/NodeJs-12+-green.svg">
+    </a>
+    <a href="https://www.npmjs.com/">
+      <img src="https://img.shields.io/badge/NPM-6+-brightgreen.svg">
+    </a>
+    <a href="https://code.visualstudio.com/">
       <img src="https://img.shields.io/badge/%20-VS%20Code-686968.svg?logo=visual-studio-code">
     </a>
   </div>
