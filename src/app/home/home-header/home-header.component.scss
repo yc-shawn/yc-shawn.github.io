@@ -1,6 +1,8 @@
 :host {
   display: block;
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/assets/images/beach-with-surfing-board.jpg") center center;
+  background-color: #103c4b;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/images/beach-with-surfing-board.jpg") center center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -58,4 +60,3 @@
     }
   }
 }
-
