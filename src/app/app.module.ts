@@ -34,8 +34,9 @@ export class RootComponent {}
         },
       ],
       {
-        useHash: true,
-      }
+    useHash: true,
+    relativeLinkResolution: 'legacy'
+}
     ),
     HomeModule,
     PortfolioModule,
