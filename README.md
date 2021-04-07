@@ -5,10 +5,10 @@
   yc-shawn.github.io
   <div align="center">
     <a href="https://angular.io/docs">
-      <img src="https://img.shields.io/badge/Angular-9.x-dd0331.svg">
+      <img src="https://img.shields.io/badge/Angular-11.x-dd0331.svg">
     </a>
     <a href="https://nodejs.org/en/">
-      <img src="https://img.shields.io/badge/NodeJs-12+-green.svg">
+      <img src="https://img.shields.io/badge/NodeJs-14+-green.svg">
     </a>
     <a href="https://www.npmjs.com/">
       <img src="https://img.shields.io/badge/NPM-6+-brightgreen.svg">
