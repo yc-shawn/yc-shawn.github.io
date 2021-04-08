@@ -15,29 +15,23 @@ export class RootComponent {}
 @NgModule({
   declarations: [RootComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     HttpClientModule,
-    RouterModule.forRoot(
-      [
-        {
-          path: '',
-          loadChildren: () =>
-            import('./home/home.module').then((m) => m.HomeModule),
-        },
-        {
-          path: 'portfolio',
-          loadChildren: () =>
-            import('./portfolio/portfolio.module').then(
-              (m) => m.PortfolioModule
-            ),
-        },
-      ],
-      {
+    RouterModule.forRoot([
+    {
+        path: '',
+        loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+    },
+    {
+        path: 'portfolio',
+        loadChildren: () => import('./portfolio/portfolio.module').then((m) => m.PortfolioModule),
+    },
+], {
     useHash: true,
-    relativeLinkResolution: 'legacy'
-}
-    ),
+    relativeLinkResolution: 'legacy',
+    initialNavigation: 'enabled'
+}),
     HomeModule,
     PortfolioModule,
   ],
