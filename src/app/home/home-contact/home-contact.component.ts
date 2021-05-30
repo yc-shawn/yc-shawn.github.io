@@ -1,5 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'yc-home-contact',
@@ -15,16 +16,20 @@ export class HomeContactComponent implements OnInit {
     message: null,
   };
 
-  constructor(private _http: HttpClient) {}
+  constructor(
+    private _http: HttpClient,
+    private _snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {}
 
   onSubmit(): void {
-    console.log('Submit!', this.contact);
     if (this.contact.name && this.contact._replyto) {
       this._http
         .post('https://formspree.io/ychen248@buffalo.edu', this.contact)
-        .subscribe();
+        .subscribe(() => {
+          this._snackBar.open('Message sent');
+        });
     }
   }
 }
