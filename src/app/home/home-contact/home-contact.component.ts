@@ -10,6 +10,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class HomeContactComponent implements OnInit {
   @HostBinding('id') id = 'contact';
 
+  messageSent = false;
+
   contact = {
     name: null,
     _replyto: null,
@@ -18,7 +20,6 @@ export class HomeContactComponent implements OnInit {
 
   constructor(
     private _http: HttpClient,
-    private _snackBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {}
@@ -26,9 +27,9 @@ export class HomeContactComponent implements OnInit {
   onSubmit(): void {
     if (this.contact.name && this.contact._replyto) {
       this._http
-        .post('https://formspree.io/ychen248@buffalo.edu', this.contact)
+        .post('https://formspree.io/f/mrgrkpzv', this.contact)
         .subscribe(() => {
-          this._snackBar.open('Message sent');
+          this.messageSent = true;
         });
     }
   }

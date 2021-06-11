@@ -28,6 +28,16 @@
     .yc-contact__form-submit {
       width: 100%;
     }
+    .yc-contact__form-sent {
+      padding: 10px;
+      color: #00b894;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg + span {
+        margin-left: 10px;
+      }
+    }
     @media screen and (max-width: 992px) {
       position: static;
       transform: none;
@@ -40,5 +50,4 @@
     }
   }
 }
-  
-  
+
