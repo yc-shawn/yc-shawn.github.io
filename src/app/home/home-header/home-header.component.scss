@@ -13,14 +13,14 @@
   .yc-header__video {
     width: 100vw;
     height: 56.25vw;
-    max-height: 95vh;
+    max-height: 90vh;
     position: relative;
     video {
       width: 100%;
       position: absolute;
-      left: 0;
       top: 50%;
-      transform: translateY(-50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -68,6 +68,16 @@
       .yc-header__intro-title {
         font-weight: 500;
         font-size: 13px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .yc-header__video {
+      height: 90vw;
+      video {
+        height: 90vw;
+        width: 160vw;
       }
     }
   }

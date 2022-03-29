@@ -42,13 +42,13 @@
       position: static;
       transform: none;
       width: 45%;
-      margin: 0 20px;
-      margin-left: auto;
+      margin: 0 20px 0 auto;
       opacity: 0.9;
     }
     @media screen and (max-width: 768px) {
       opacity: 0.9;
       width: auto;
+      margin: 0 20px;
     }
   }
 }
