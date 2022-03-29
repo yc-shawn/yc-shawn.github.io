@@ -1,6 +1,6 @@
 :host {
   display: block;
-  background-image: url('/assets/images/road_sit_right_16_8.jpg');
+  background-image: url("/assets/images/shawn_sit_at_stairs_16_8.jpg");
   background-size: cover;
   background-position: center center;
   width: 100%;
@@ -16,7 +16,7 @@
     width: 30%;
     position: absolute;
     top: 50%;
-    left: 20%;
+    right: 20%;
     transform: translateY(-50%);
     padding: 15px;
     margin: 0;
@@ -43,6 +43,8 @@
       transform: none;
       width: 45%;
       margin: 0 20px;
+      margin-left: auto;
+      opacity: 0.9;
     }
     @media screen and (max-width: 768px) {
       opacity: 0.9;
@@ -50,4 +52,3 @@
     }
   }
 }
-

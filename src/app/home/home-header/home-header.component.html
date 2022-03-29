@@ -1,11 +1,12 @@
-<!-- Logo -->
-<div class="yc-header__logo"></div>
-
+<!-- Background video -->
 <div class="yc-header__video">
-  <video autoplay muted loop>
+  <video #video autoplay [muted]="true" loop>
     <source src="/assets/videos/shawn_skiing_clip.mp4" type="video/mp4" />
   </video>
 </div>
+
+<!-- Logo -->
+<div class="yc-header__logo"></div>
 
 <!-- Intro banner -->
 <div class="yc-header__intro">
