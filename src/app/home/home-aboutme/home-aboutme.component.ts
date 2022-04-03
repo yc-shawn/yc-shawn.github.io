@@ -7,17 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeAboutmeComponent implements OnInit {
   skills: string[] = [
-    'Java',
     'Javascript',
     'Typescript',
-    'NodeJS',
-    'React/Redux',
+    'React',
     'Ember',
     'Angular',
+    'NodeJS',
     'Bootstrap',
-    'Jquery',
-    'CSS/SASS/SCSS',
-    'AWS',
     'MongoDB',
   ];
 
@@ -33,8 +29,6 @@ export class HomeAboutmeComponent implements OnInit {
     Typescript: 4,
     Jquery: 4,
     NodeJS: 4,
-    'React/Redux': 4,
-    'SQL/NoSQL': 3,
     Ember: 4,
     Angular: 4,
     Bootstrap: 4,
