@@ -30,7 +30,7 @@
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@nguniversal/express-engine": "^13.0.2",
     "bootstrap": "^4.4.1",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "jquery": "^3.5.1",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
